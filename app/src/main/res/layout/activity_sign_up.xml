@@ -7,7 +7,7 @@
     tools:context=".SignUpActivity">
 
     <EditText
-        android:id="@+id/etSignUpId3"
+        android:id="@+id/etSignUpId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -109,7 +109,7 @@
         android:layout_marginTop="16dp"
         android:text="비밀번호"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSignUpId3" />
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpId" />
 
     <TextView
         android:id="@+id/tvSignUpId"
