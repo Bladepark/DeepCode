@@ -1,0 +1,13 @@
+package com.example.deepcode
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+// 5조 파이팅!!
+
+class HomeActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_home)
+    }
+}
