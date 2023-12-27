@@ -78,17 +78,17 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_add_feed"
+        android:id="@+id/fab_home_add_feed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_add_feed"
-        app:layout_constraintTop_toTopOf="@id/fab_home"
-        app:layout_constraintStart_toStartOf="@id/fab_home"
-        app:layout_constraintEnd_toEndOf="@id/fab_home"
-        app:layout_constraintBottom_toBottomOf="@id/fab_home"/>
+        app:layout_constraintTop_toTopOf="@id/fab_home_add"
+        app:layout_constraintStart_toStartOf="@id/fab_home_add"
+        app:layout_constraintEnd_toEndOf="@id/fab_home_add"
+        app:layout_constraintBottom_toBottomOf="@id/fab_home_add"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_home"
+        android:id="@+id/fab_home_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_add"
