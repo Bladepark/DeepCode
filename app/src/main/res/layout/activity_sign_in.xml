@@ -55,30 +55,21 @@
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="text"
+        android:hint="아이디를 입력해주세요"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSignUpId" />
 
     <TextView
-        android:id="@+id/tvSignUpIdError"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:text="아이디를 입력해주세요"
-        android:textColor="@android:color/holo_red_light"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSignUpId" />
-
-    <TextView
         android:id="@+id/tvSignUpPw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:text="비밀번호"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSignUpIdError" />
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpId" />
 
     <EditText
         android:id="@+id/etSignUpPw"
@@ -88,19 +79,10 @@
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="text"
+        android:hint="비밀번호를 입력해주세요"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSignUpPw" />
-
-    <TextView
-        android:id="@+id/tvSignInPwError"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:text="비밀번호를 입력해주세요"
-        android:textColor="@android:color/holo_red_light"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSignUpPw" />
 
     <Button
         android:id="@+id/btnSignIn"
