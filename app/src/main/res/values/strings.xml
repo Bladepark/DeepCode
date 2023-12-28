@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">DeepCode</string>
+    <string name="sign_id">아이디를 입력해주세요</string>
+    <string name="sign_pw">비밀번호를 입력해주세요</string>
+    <string name="sign_up_name">이름를 입력해주세요</string>
+    <string name="sign_up_pwch">위와 같은 비밀번호를 입력해주세요</string>
+    <string name="sign_up_pwerr">비밀번호가 일치하지 않습니다</string>
+    <string name="pwname">비밀번호</string>
+    <string name="signupname">회원가입</string>
+    <string name="pwchName">비밀번호 확인</string>
+    <string name="signIn_login">로그인</string>
+    <string name="toast_msg_idpqErr">아이디/비밀번호를 확인해주세요</string>
+    <string name="toast_login">로그인 성공</string>
     <!-- TODO: Remove or change this placeholder text -->
 
 
