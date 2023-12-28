@@ -101,7 +101,8 @@
     <string name="home_item4_text">올해는 새로운 시대의 시작을 알리는 해\n내년이 더 나은 세상을 위한 다음 장을 만들어갈 기회라고 믿는 이유가 바로 여기에 있다</string>
     <string name="home_item5_text">올해는 새로운 시대의 시작을 알리는 해\n내년이 더 나은 세상을 위한 다음 장을 만들어갈 기회라고 믿는 이유가 바로 여기에 있다</string>
 
-    <string name="btn_follow_text">follow</string>
+    <string name="btn_follow_text">팔로우</string>
+    <string name="btn_unfollow_text">언팔로우</string>
     <string name="detail_item1_text">우리는 지금 전환의 시작점에 있다. 아직  AI를 활용하는 방법을 찾지 못했다면, 당신은 혼자가 아니다.
         인터넷 시작 당시에는 사용하는 사람이 많지 않았으나, 시간이 지나면서 일반화되고 어느 날 대부분이 이메일을 하고  온라인으로 물건을 구입하고 검색 엔진을 사용한다는 사실을 깨닫게 됐다.
         즉 자연스럽게 누구나 AI를 사용할 날이 찾아올 것이다.내가 가장 좋아하는 혁신 이야기는 2000년 이후 전 세계에서 5세 이전에 사망하는 어린이의 수가 절반으로 줄었다는 것이다.
