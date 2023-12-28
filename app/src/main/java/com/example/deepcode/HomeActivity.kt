@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import com.example.deepcode.member.MemberInfo
 import com.example.deepcode.profile.ProfileActivity
 
 // 5조 파이팅!!
@@ -56,7 +57,6 @@ class HomeActivity : AppCompatActivity() {
     private val item5Img: ImageView by lazy { item5.findViewById(R.id.iv_item_img) }
     private val item5Text: TextView by lazy { item5.findViewById(R.id.tv_item_text) }
 
-    private lateinit var resultLauncher : ActivityResultLauncher<Intent>
 
     private val items
         get() = listOf(
@@ -94,7 +94,6 @@ class HomeActivity : AppCompatActivity() {
     private fun initView() {
         setNavBtnClickListener()
         setHomeItemsEvent()
-        setRegisterForActivityResult()
         drawHomeItems()
         setFollowBtnStatus()
     }
@@ -166,19 +165,6 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    private fun setRegisterForActivityResult() {
-        resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            if (result.resultCode == RESULT_OK) {
-                val data: Intent? = result.data
-//              val id = data?.getStringExtra("memberId")
-//              val pwd = data?.getStringExtra("memberPwd")
-
-
-
-            }
-        }
-    }
-
     private fun drawHomeItems() {
         item1Profile.setImageResource(R.drawable.ic_bill)
         item1UserName.text = getString(R.string.home_item1_user_name)
@@ -209,7 +195,6 @@ class HomeActivity : AppCompatActivity() {
     private fun setFollowBtnStatus() {
         followBtns.forEach { followBtn ->
             followBtn.setOnClickListener {
-                // 눌리면 follow에서 unfollow로 바뀌고 팔로우 목록에 추가
                 when(followBtn.text.toString()) {
                     "follow" -> {
                         followBtn.text = getString(R.string.btn_unfollow_text)
@@ -224,8 +209,6 @@ class HomeActivity : AppCompatActivity() {
                         followBtn.text = getString(R.string.btn_follow_text)
                     }
                 }
-                // 눌린 상태를 디테일에 전달
-
             }
         }
     }
