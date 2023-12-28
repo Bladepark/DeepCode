@@ -43,6 +43,18 @@ class SignUpActivity : AppCompatActivity() {
             }
         }
 
+
+        et_checkpw.doAfterTextChanged {
+            val inputpw = et_pw.text.toString()
+            val checkpw = et_checkpw.text.toString()
+            if (inputpw != checkpw) {
+                Toast.makeText(this,"비밀번호가 일치하지 않습니다",Toast.LENGTH_SHORT).show()
+                btn_sign_up.isEnabled = false
+            }else {
+                btn_sign_up.isEnabled = true
+            }
+        }
+
         btn_sign_up.setOnClickListener {
             val inputId =et_id.text.toString()
             val inputpw =et_pw.text.toString()
