@@ -35,14 +35,49 @@
         app:srcCompat="@drawable/ic_snowmountain" />
 
     <TextView
+        android:id="@+id/tvSignUpname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="이름"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_snowmountain" />
+
+    <EditText
+        android:id="@+id/etSignUpName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/sign_up_name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUpname" />
+
+    <TextView
+        android:id="@+id/tvSignUpnameError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/sign_up_name"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpName"
+        android:visibility="gone" />
+
+    <TextView
         android:id="@+id/tvSignUpId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
         android:text="아이디"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_snowmountain" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUpnameError" />
 
     <EditText
         android:id="@+id/etSignUpId"
@@ -51,6 +86,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/sign_id"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -61,20 +98,20 @@
         android:id="@+id/tvSignUpIdError"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
-        android:text="아이디를 입력해주세요"
+        android:text="@string/sign_id"
         android:textColor="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSignUpId" />
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpId"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/tvSignUpPw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:text="비밀번호"
+        android:text="@string/pwname"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSignUpIdError" />
 
@@ -83,8 +120,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
+        android:hint="@string/sign_pw"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -95,20 +133,20 @@
         android:id="@+id/tvSignInPwError"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
-        android:text="비밀번호를 입력해주세요"
+        android:text="@string/sign_pw"
         android:textColor="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSignUpPw" />
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpPw"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/tvSignUpPwConfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
-        android:text="비밀번호 확인"
+        android:text="@string/pwchName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSignInPwError" />
 
@@ -117,8 +155,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="32dp"
+        android:hint="@string/sign_up_pwch"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -129,19 +168,20 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
-        android:text="비밀번호가 일치하지 않습니다"
+        android:text="@string/sign_up_pwerr"
         android:textColor="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSignUpPwConfirm" />
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpPwConfirm"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/btnSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:text="회원가입"
+        android:text="@string/signupname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etSignUpPwConfirm" />
