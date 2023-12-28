@@ -23,55 +23,70 @@ class SignUpActivity : AppCompatActivity() {
         val btn_sign_up = findViewById<Button>(R.id.btnSignUp)
 
         btn_sign_up.isEnabled = false
+
         et_id.doAfterTextChanged {
-            btn_sign_up.isEnabled =
-                et_name.text.isNotEmpty() && et_id.text.isNotEmpty() && et_pw.text.isNotEmpty() && et_checkpw.text.isNotEmpty()
-            val inputid = et_id.text.toString()
-            if (!inputid.matches("^[a-z0-9_.-]*\$".toRegex())) {
-                Toast.makeText(this, "아이디 형식이 올바르지 않습니다", Toast.LENGTH_SHORT).show()
-            }
+            fieldsAndUpdateButtonState(et_name, et_id, et_pw, et_checkpw, btn_sign_up)
+            checkForSpaces(et_id)
+        }
+
+        et_name.doAfterTextChanged {
+            fieldsAndUpdateButtonState(et_name, et_id, et_pw, et_checkpw, btn_sign_up)
+            checkForSpaces(et_name)
         }
 
         et_pw.doAfterTextChanged {
-            btn_sign_up.isEnabled =
-                et_name.text.isNotEmpty() && et_id.text.isNotEmpty() && et_pw.text.isNotEmpty() && et_checkpw.text.isNotEmpty()
-            val inputpw = et_pw.text.toString()
-            if (!inputpw.matches("^[a-zA-Z0-9_.-]*\$".toRegex())) {
-                Toast.makeText(this, "비밀번호 형식이 올바르지 않거나 일치하지 않습니다", Toast.LENGTH_SHORT).show()
-            } else {
-                btn_sign_up.isEnabled = true
-            }
+            fieldsAndUpdateButtonState(et_name, et_id, et_pw, et_checkpw, btn_sign_up)
+            checkForSpaces(et_pw)
         }
 
-
         et_checkpw.doAfterTextChanged {
-            val inputpw = et_pw.text.toString()
-            val checkpw = et_checkpw.text.toString()
-            if (inputpw != checkpw) {
-                Toast.makeText(this,"비밀번호가 일치하지 않습니다",Toast.LENGTH_SHORT).show()
-                btn_sign_up.isEnabled = false
-            }else {
-                btn_sign_up.isEnabled = true
-            }
+            fieldsAndUpdateButtonState(et_name, et_id, et_pw, et_checkpw, btn_sign_up)
+            checkForSpaces(et_checkpw)
         }
 
         btn_sign_up.setOnClickListener {
-            val inputId =et_id.text.toString()
-            val inputpw =et_pw.text.toString()
+            val inputId = et_id.text.toString()
+            val inputpw = et_pw.text.toString()
+            val inputName = et_name.text.toString()
 
+            if (inputpw != et_checkpw.text.toString()) {
+                Toast.makeText(this, "비밀번호가 일치하지 않습니다", Toast.LENGTH_SHORT).show()
+            } else {
+                val containsSpaces = inputId.contains(" ") || inputpw.contains(" ") || inputName.contains(" ")
+                if (containsSpaces) {
+                    Toast.makeText(this, "아이디, 이름 또는 비밀번호에는 띄어쓰기를 사용할 수 없습니다", Toast.LENGTH_SHORT).show()
+                } else {
+                    val newMember = MemberData(
+                        id = inputId,
+                        pwd = inputpw,
+                        name = inputName
+                    )
+                    MemberInfo.memberInfo.add(newMember)
+                    Toast.makeText(this, "가입완료! 로그인 후 이용가능", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, SignInActivity::class.java)
+                    intent.putExtra("id", inputId)
+                    intent.putExtra("password", inputpw)
+                    setResult(RESULT_OK, intent)
+                    if (!isFinishing) finish()
+                }
+            }
+        }
+    }
 
-            val newMember = MemberData(
-                id = inputId,
-                pwd = inputpw,
-                name = et_name.text.toString()
-            )
-            MemberInfo.memberInfo.add(newMember)
-            Toast.makeText(this,"가입완료! 로그인 후 이용가능", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, SignInActivity::class.java)
-            intent.putExtra("id", inputId)
-            intent.putExtra("password", inputpw)
-            setResult(RESULT_OK, intent)
-            if (!isFinishing) finish()
+    private fun fieldsAndUpdateButtonState(
+        et_name: EditText,
+        et_id: EditText,
+        et_pw: EditText,
+        et_checkpw: EditText,
+        btn_sign_up: Button
+    ) {
+        btn_sign_up.isEnabled =
+            et_name.text.isNotEmpty() && et_id.text.isNotEmpty() && et_pw.text.isNotEmpty() && et_checkpw.text.isNotEmpty()
+    }
+
+    private fun checkForSpaces(editText: EditText) {
+        if (editText.text.toString().contains(" ")) {
+            editText.error = "띄어쓰기를 사용할 수 없습니다"
         }
     }
 }
