@@ -16,19 +16,19 @@
             android:name=".DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".FollowingActivity"
+            android:name=".follow.FollowingActivity"
             android:exported="false" />
         <activity
-            android:name=".FollowerActivity"
+            android:name=".follow.FollowerActivity"
             android:exported="false" />
         <activity
-            android:name=".UpdateProfileActivity"
+            android:name=".profile.UpdateProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".sign.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".sign.SignInActivity"
             android:exported="true" >
            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +36,7 @@
             </intent-filter>-->
         </activity>
         <activity
-            android:name=".ProfileActivity"
+            android:name=".profile.ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".NewsActivity"
