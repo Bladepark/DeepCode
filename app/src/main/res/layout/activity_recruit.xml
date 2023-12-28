@@ -46,33 +46,33 @@
 
             <include
                 android:id="@+id/item1"
+                layout="@layout/recruit_item_layout"
                 android:layout_width="200dp"
-                android:layout_height="match_parent"
-                layout="@layout/recruit_item_layout" />
+                android:layout_height="match_parent" />
 
             <include
                 android:id="@+id/item2"
+                layout="@layout/recruit_item_layout"
                 android:layout_width="200dp"
-                android:layout_height="match_parent"
-                layout="@layout/recruit_item_layout" />
+                android:layout_height="match_parent" />
 
             <include
                 android:id="@+id/item3"
+                layout="@layout/recruit_item_layout"
                 android:layout_width="200dp"
-                android:layout_height="match_parent"
-                layout="@layout/recruit_item_layout" />
+                android:layout_height="match_parent" />
 
             <include
                 android:id="@+id/item4"
+                layout="@layout/recruit_item_layout"
                 android:layout_width="200dp"
-                android:layout_height="match_parent"
-                layout="@layout/recruit_item_layout" />
+                android:layout_height="match_parent" />
 
             <include
                 android:id="@+id/item5"
+                layout="@layout/recruit_item_layout"
                 android:layout_width="200dp"
-                android:layout_height="match_parent"
-                layout="@layout/recruit_item_layout" />
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 
@@ -94,34 +94,34 @@
             android:orientation="horizontal">
 
             <include
-                android:id="@+id/item1"
+                android:id="@+id/item6"
+                layout="@layout/recruit_item_layout"
                 android:layout_width="200dp"
-                android:layout_height="match_parent"
-                layout="@layout/recruit_item_layout" />
+                android:layout_height="match_parent" />
 
             <include
-                android:id="@+id/item2"
+                android:id="@+id/item7"
+                layout="@layout/recruit_item_layout"
                 android:layout_width="200dp"
-                android:layout_height="match_parent"
-                layout="@layout/recruit_item_layout" />
+                android:layout_height="match_parent" />
 
             <include
-                android:id="@+id/item3"
+                android:id="@+id/item8"
+                layout="@layout/recruit_item_layout"
                 android:layout_width="200dp"
-                android:layout_height="match_parent"
-                layout="@layout/recruit_item_layout" />
+                android:layout_height="match_parent" />
 
             <include
-                android:id="@+id/item4"
+                android:id="@+id/item9"
+                layout="@layout/recruit_item_layout"
                 android:layout_width="200dp"
-                android:layout_height="match_parent"
-                layout="@layout/recruit_item_layout" />
+                android:layout_height="match_parent" />
 
             <include
-                android:id="@+id/item5"
+                android:id="@+id/item10"
+                layout="@layout/recruit_item_layout"
                 android:layout_width="200dp"
-                android:layout_height="match_parent"
-                layout="@layout/recruit_item_layout" />
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 
