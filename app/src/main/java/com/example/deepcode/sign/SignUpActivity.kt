@@ -24,24 +24,24 @@ class SignUpActivity : AppCompatActivity() {
 
         btn_sign_up.isEnabled = false
 
-        et_id.doAfterTextChanged {
-            fieldsAndUpdateButtonState(et_name, et_id, et_pw, et_checkpw, btn_sign_up)
-            checkForSpaces(et_id)
-        }
-
         et_name.doAfterTextChanged {
             fieldsAndUpdateButtonState(et_name, et_id, et_pw, et_checkpw, btn_sign_up)
-            checkForSpaces(et_name)
+            checkValidName(et_name)
         }
+
+        et_id.doAfterTextChanged {
+            fieldsAndUpdateButtonState(et_name, et_id, et_pw, et_checkpw, btn_sign_up)
+            checkValidId(et_id)
+        }
+
 
         et_pw.doAfterTextChanged {
             fieldsAndUpdateButtonState(et_name, et_id, et_pw, et_checkpw, btn_sign_up)
-            checkForSpaces(et_pw)
+            checkValidPw(et_pw)
         }
 
         et_checkpw.doAfterTextChanged {
             fieldsAndUpdateButtonState(et_name, et_id, et_pw, et_checkpw, btn_sign_up)
-            checkForSpaces(et_checkpw)
         }
 
         btn_sign_up.setOnClickListener {
@@ -84,9 +84,24 @@ class SignUpActivity : AppCompatActivity() {
             et_name.text.isNotEmpty() && et_id.text.isNotEmpty() && et_pw.text.isNotEmpty() && et_checkpw.text.isNotEmpty()
     }
 
-    private fun checkForSpaces(editText: EditText) {
-        if (editText.text.toString().contains(" ")) {
-            editText.error = "띄어쓰기를 사용할 수 없습니다"
+    private fun checkValidName(editText: EditText) {
+        val namePattern = "^[a-zA-Z가-힣]*$".toRegex()
+        if (!namePattern.matches(editText.text.toString())) {
+            editText.error = "이름은 영어 또는 한글로만 입력해주세요"
+        }
+    }
+
+    private fun checkValidId(editText: EditText) {
+        val idPattern = "^[a-zA-Z0-9]*$".toRegex()
+        if (!idPattern.matches(editText.text.toString())) {
+            editText.error = "ID는 영어와 숫자로만 입력해주세요"
+        }
+    }
+
+    private fun checkValidPw(editText: EditText) {
+        val passwordPattern = "^[a-zA-Z0-9!@#\$%^&*()-_+=?/]*$".toRegex()
+        if (!passwordPattern.matches(editText.text.toString())) {
+            editText.error = "비밀번호는 영어, 숫자, 특수문자를 포함하여 입력해주세요"
         }
     }
 }
