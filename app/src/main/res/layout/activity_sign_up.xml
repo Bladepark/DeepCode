@@ -59,21 +59,32 @@
         app:layout_constraintTop_toBottomOf="@+id/tvSignUpname" />
 
     <TextView
+        android:id="@+id/tvSignUpnameError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="이름을 입력해주세요"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpname"
+        android:visibility="gone" />
+
+    <TextView
         android:id="@+id/tvSignUpId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
         android:text="아이디"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSignUpname" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUpnameError" />
 
     <EditText
         android:id="@+id/etSignUpId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:hint="아이디를 입력해주세요"
@@ -84,21 +95,32 @@
         app:layout_constraintTop_toBottomOf="@+id/tvSignUpId" />
 
     <TextView
+        android:id="@+id/tvSignUpIdError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="아이디를 입력해주세요"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpId"
+        android:visibility="gone" />
+
+    <TextView
         android:id="@+id/tvSignUpPw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
         android:text="비밀번호"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSignUpId" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUpIdError" />
 
     <EditText
         android:id="@+id/etSignUpPw"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:hint="비밀번호를 입력해주세요"
         android:inputType="textPassword"
@@ -108,21 +130,32 @@
         app:layout_constraintTop_toBottomOf="@+id/tvSignUpPw" />
 
     <TextView
+        android:id="@+id/tvSignInPwError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="비밀번호를 입력해주세요"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpPw"
+        android:visibility="gone" />
+
+    <TextView
         android:id="@+id/tvSignUpPwConfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
         android:text="비밀번호 확인"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSignUpPw" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSignInPwError" />
 
     <EditText
         android:id="@+id/etSignUpPwConfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="32dp"
         android:hint="위와 같은 비밀번호를 입력해주세요"
         android:inputType="textPassword"
@@ -130,6 +163,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSignUpPwConfirm" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="비밀번호가 일치하지 않습니다"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSignUpPwConfirm"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/btnSignUp"
