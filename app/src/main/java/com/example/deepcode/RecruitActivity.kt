@@ -46,25 +46,25 @@ class RecruitActivity : AppCompatActivity() {
     private val item5UserName: TextView by lazy { item5.findViewById(R.id.tv_item_user_name) }
     private val item5Text: TextView by lazy { item5.findViewById(R.id.tv_item_text) }
 
-    private val item6Profile: ImageView by lazy { item5.findViewById(R.id.iv_item_profile) }
-    private val item6UserName: TextView by lazy { item5.findViewById(R.id.tv_item_user_name) }
-    private val item6Text: TextView by lazy { item5.findViewById(R.id.tv_item_text) }
+    private val item6Profile: ImageView by lazy { item6.findViewById(R.id.iv_item_profile) }
+    private val item6UserName: TextView by lazy { item6.findViewById(R.id.tv_item_user_name) }
+    private val item6Text: TextView by lazy { item6.findViewById(R.id.tv_item_text) }
 
-    private val item7Profile: ImageView by lazy { item5.findViewById(R.id.iv_item_profile) }
-    private val item7UserName: TextView by lazy { item5.findViewById(R.id.tv_item_user_name) }
-    private val item7Text: TextView by lazy { item5.findViewById(R.id.tv_item_text) }
+    private val item7Profile: ImageView by lazy { item7.findViewById(R.id.iv_item_profile) }
+    private val item7UserName: TextView by lazy { item7.findViewById(R.id.tv_item_user_name) }
+    private val item7Text: TextView by lazy { item7.findViewById(R.id.tv_item_text) }
 
-    private val item8Profile: ImageView by lazy { item5.findViewById(R.id.iv_item_profile) }
-    private val item8UserName: TextView by lazy { item5.findViewById(R.id.tv_item_user_name) }
-    private val item8Text: TextView by lazy { item5.findViewById(R.id.tv_item_text) }
+    private val item8Profile: ImageView by lazy { item8.findViewById(R.id.iv_item_profile) }
+    private val item8UserName: TextView by lazy { item8.findViewById(R.id.tv_item_user_name) }
+    private val item8Text: TextView by lazy { item8.findViewById(R.id.tv_item_text) }
 
-    private val item9Profile: ImageView by lazy { item5.findViewById(R.id.iv_item_profile) }
-    private val item9UserName: TextView by lazy { item5.findViewById(R.id.tv_item_user_name) }
-    private val item9Text: TextView by lazy { item5.findViewById(R.id.tv_item_text) }
+    private val item9Profile: ImageView by lazy { item9.findViewById(R.id.iv_item_profile) }
+    private val item9UserName: TextView by lazy { item9.findViewById(R.id.tv_item_user_name) }
+    private val item9Text: TextView by lazy { item9.findViewById(R.id.tv_item_text) }
 
-    private val item10Profile: ImageView by lazy { item5.findViewById(R.id.iv_item_profile) }
-    private val item10UserName: TextView by lazy { item5.findViewById(R.id.tv_item_user_name) }
-    private val item10Text: TextView by lazy { item5.findViewById(R.id.tv_item_text) }
+    private val item10Profile: ImageView by lazy { item10.findViewById(R.id.iv_item_profile) }
+    private val item10UserName: TextView by lazy { item10.findViewById(R.id.tv_item_user_name) }
+    private val item10Text: TextView by lazy { item10.findViewById(R.id.tv_item_text) }
 
     private val items
         get() = listOf(
