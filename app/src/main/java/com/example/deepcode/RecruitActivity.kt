@@ -169,7 +169,6 @@ class RecruitActivity : AppCompatActivity() {
                         val intent = Intent(this, DetailActivity::class.java)
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item4_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
                         intent.putExtra("itemText", R.string.home_item4_text)
                         startActivity(intent)
                     }
@@ -177,7 +176,6 @@ class RecruitActivity : AppCompatActivity() {
                         val intent = Intent(this, DetailActivity::class.java)
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item4_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
                         intent.putExtra("itemText", R.string.home_item4_text)
                         startActivity(intent)
                     }
@@ -185,7 +183,6 @@ class RecruitActivity : AppCompatActivity() {
                         val intent = Intent(this, DetailActivity::class.java)
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item4_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
                         intent.putExtra("itemText", R.string.home_item4_text)
                         startActivity(intent)
                     }
@@ -193,7 +190,6 @@ class RecruitActivity : AppCompatActivity() {
                         val intent = Intent(this, DetailActivity::class.java)
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item4_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
                         intent.putExtra("itemText", R.string.home_item4_text)
                         startActivity(intent)
                     }
@@ -201,7 +197,6 @@ class RecruitActivity : AppCompatActivity() {
                         val intent = Intent(this, DetailActivity::class.java)
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item4_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
                         intent.putExtra("itemText", R.string.home_item4_text)
                         startActivity(intent)
                     }
