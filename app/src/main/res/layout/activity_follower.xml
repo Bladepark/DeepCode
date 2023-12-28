@@ -26,7 +26,7 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <TextView
+    <!--<TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -109,6 +109,21 @@
         android:text="김삿갓"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sv_follower"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_follower">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_follower"
+            android:orientation="vertical"/>
+
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
