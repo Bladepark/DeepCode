@@ -1,4 +1,4 @@
-package com.example.deepcode
+package com.example.deepcode.member
 
 object MemberInfo {
     var memberInfo = arrayListOf<MemberData>()
