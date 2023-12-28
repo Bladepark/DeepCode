@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.widget.doAfterTextChanged
 
 class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,15 +28,31 @@ class SignInActivity : AppCompatActivity() {
         intent.putExtra("name", "value")
         intent.putExtra("id", "value")
 
+        btn_login.isEnabled =false
+        et_id.doAfterTextChanged {
+            btn_login.isEnabled = et_id.text.isNotEmpty() && et_pw.text.isNotEmpty()
+        }
+
+        et_pw.doAfterTextChanged {
+            btn_login.isEnabled = et_id.text.isNotEmpty() && et_pw.text.isNotEmpty()
+        }
 
         btn_login.setOnClickListener {
-            if (et_id.text.toString().trim().isEmpty() || et_pw.text.toString().trim().isEmpty()) {
+            val inputId = et_id.text.toString()
+            val inputPw = et_pw.text.toString()
+            if (et_id.text.isEmpty() || et_pw.text.isEmpty()) {
                 Toast.makeText(this, "아이디/비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show()
-                startActivity(intent)
             } else {
-                Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
+                val memberExist = MemberInfo.memberInfo.any { it.id == inputId && it.pwd == inputPw }
+                if(memberExist) {
+                    Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, HomeActivity::class.java)
+                    intent.putExtra("memberId", inputId)
+                    intent.putExtra("memberPw", inputPw)
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this,"아이디/비밀번호가 일치하지 않습니다. 회원이 아니시라면 회원가입을 먼저 해주세요",Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
