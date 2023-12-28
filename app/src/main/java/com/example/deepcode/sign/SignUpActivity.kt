@@ -1,15 +1,15 @@
 package com.example.deepcode.sign
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
-import com.example.deepcode.MemberData
-import com.example.deepcode.MemberInfo
 import com.example.deepcode.R
+import com.example.deepcode.member.MemberData
+import com.example.deepcode.member.MemberInfo
 
 class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
