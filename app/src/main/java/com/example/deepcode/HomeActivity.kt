@@ -96,7 +96,7 @@ class HomeActivity : AppCompatActivity() {
         setHomeItemsEvent()
         setRegisterForActivityResult()
         drawHomeItems()
-        checkFollowBtnStatus()
+        setFollowBtnStatus()
     }
 
 
@@ -206,12 +206,26 @@ class HomeActivity : AppCompatActivity() {
         item5Text.text = getString(R.string.home_item5_text)
     }
 
-    private fun checkFollowBtnStatus() {
+    private fun setFollowBtnStatus() {
         followBtns.forEach { followBtn ->
             followBtn.setOnClickListener {
                 // 눌리면 follow에서 unfollow로 바뀌고 팔로우 목록에 추가
-
+                when(followBtn.text.toString()) {
+                    "follow" -> {
+                        followBtn.text = getString(R.string.btn_unfollow_text)
+                    }
+                    "unfollow" -> {
+                        followBtn.text = getString(R.string.btn_follow_text)
+                    }
+                    "팔로우" -> {
+                        followBtn.text = getString(R.string.btn_unfollow_text)
+                    }
+                    "언팔로우" -> {
+                        followBtn.text = getString(R.string.btn_follow_text)
+                    }
+                }
                 // 눌린 상태를 디테일에 전달
+
             }
         }
     }
