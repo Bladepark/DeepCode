@@ -12,6 +12,8 @@ import com.example.deepcode.R
 import com.example.deepcode.RecruitActivity
 import com.example.deepcode.follow.FollowerActivity
 import com.example.deepcode.follow.FollowingActivity
+import com.example.deepcode.member.MemberInfo
+import com.example.deepcode.member.MemberInfo.memberInfo
 import com.example.deepcode.sign.SignInActivity
 
 class ProfileActivity : AppCompatActivity() {
@@ -41,8 +43,10 @@ class ProfileActivity : AppCompatActivity() {
         val follower = findViewById<TextView>(R.id.tv_follower)
         val following = findViewById<TextView>(R.id.tv_following)
 
-        profileId.text = "myPark"
-        profileName.text = "박민영"
+        // 로그인한 Member의 ID, Name을 가져옴
+        val member = MemberInfo.memberInfo[0]
+        profileId.text = member.id
+        profileName.text = member.name
 
         // ivProfile 5장중 하나 랜덤
         val profileList = listOf(
