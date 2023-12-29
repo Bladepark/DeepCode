@@ -11,7 +11,16 @@
     <string name="signIn_login">로그인</string>
     <string name="toast_msg_idpqErr">아이디/비밀번호를 확인해주세요</string>
     <string name="toast_login">로그인 성공</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="recuit_item1_user_name">네이버 채용공고</string>
+    <string name="recuit_item2_user_name">카카오 채용공고</string>
+    <string name="recuit_item3_user_name">토스 채용공고</string>
+    <string name="recuit_item4_user_name">우아한형제들 채용공고</string>
+    <string name="recuit_item5_user_name">삼쩜삼 채용공고</string>
+    <string name="recuit_item1_text">[지원기간] \n2023.12.29~2024.01.05 \n[전형절차] \n 서류>온라인코딩테스트>1차면접>인턴십>2차면접</string>
+    <string name="recuit_item2_text">[지원기간] \n2023.12.29~2024.01.05 \n[전형절차] \n 서류>온라인코딩테스트>1차면접>인턴십>2차면접</string>
+    <string name="recuit_item3_text">[지원기간] \n2023.12.29~2024.01.05 \n[전형절차] \n 서류>온라인코딩테스트>1차면접>인턴십>2차면접</string>
+    <string name="recuit_item4_text">[지원기간] \n2023.12.29~2024.01.05 \n[전형절차] \n 서류>온라인코딩테스트>1차면접>인턴십>2차면접</string>
+    <string name="recuit_item5_text">[지원기간] \n2023.12.29~2024.01.05 \n[전형절차] \n 서류>온라인코딩테스트>1차면접>인턴십>2차면접</string>
 
 
 
