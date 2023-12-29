@@ -15,6 +15,9 @@ import com.example.deepcode.R
 import com.example.deepcode.member.MemberInfo
 
 class SignInActivity : AppCompatActivity() {
+
+    private lateinit var resurtLauncher: ActivityResultLauncher<Intent>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
@@ -62,8 +65,6 @@ class SignInActivity : AppCompatActivity() {
             resurtLauncher.launch(intent)
         }
     }
-
-    private lateinit var resurtLauncher: ActivityResultLauncher<Intent>
 
     private fun setResultSignUp() {
         resurtLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {result ->
