@@ -1,3 +1,3 @@
 package com.example.deepcode.member
 
-data class MemberData(val id: String, val pwd: String, val name:String)
+data class MemberData(var id: String, val pwd: String, var name:String)

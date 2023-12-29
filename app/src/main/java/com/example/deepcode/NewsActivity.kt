@@ -63,7 +63,11 @@ class NewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)
 
+
+
         initView()
+
+
     }
 
 
@@ -93,56 +97,46 @@ class NewsActivity : AppCompatActivity() {
                 when (item) {
                     item1 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("FromActivity", "News")
-                        intent.putExtra("url", "https://www.aitimes.com/news/articleView.html?idxno=155726")
-                        intent.putExtra("itemProfile", R.drawable.ic_ai_news)
-                        intent.putExtra("itemUserName", R.string.news_item1_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_macdonald)
-                        intent.putExtra("itemText", R.string.news_item1_text)
+                        intent.putExtra("itemProfile", R.drawable.ic_bill)
+                        intent.putExtra("itemUserName", R.string.home_item1_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
+                        intent.putExtra("itemText", R.string.home_item1_text)
                         startActivity(intent)
                     }
 
                     item2 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("FromActivity", "News")
-                        intent.putExtra("url", "https://www.itworld.co.kr/topnews/318924")
-                        intent.putExtra("itemProfile", R.drawable.ic_it_world)
-                        intent.putExtra("itemUserName", R.string.news_item2_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_happy_dev)
-                        intent.putExtra("itemText", R.string.news_item2_text)
+                        intent.putExtra("itemProfile", R.drawable.ic_bill)
+                        intent.putExtra("itemUserName", R.string.home_item2_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
+                        intent.putExtra("itemText", R.string.home_item2_text)
                         startActivity(intent)
                     }
 
                     item3 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("FromActivity", "News")
-                        intent.putExtra("url", "https://www.yna.co.kr/view/AKR20231229060700017?section=industry/technology-science")
-                        intent.putExtra("itemProfile", R.drawable.ic_yeonhap_news)
-                        intent.putExtra("itemUserName", R.string.news_item3_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_kakaomobile_news)
-                        intent.putExtra("itemText", R.string.news_item3_text)
+                        intent.putExtra("itemProfile", R.drawable.ic_bill)
+                        intent.putExtra("itemUserName", R.string.home_item3_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
+                        intent.putExtra("itemText", R.string.home_item3_text)
                         startActivity(intent)
                     }
 
                     item4 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("FromActivity", "News")
-                        intent.putExtra("url", "https://zdnet.co.kr/view/?no=20231228095417")
-                        intent.putExtra("itemProfile", R.drawable.ic_zdnet)
-                        intent.putExtra("itemUserName", R.string.news_item4_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_hyosung_person)
-                        intent.putExtra("itemText", R.string.news_item4_text)
+                        intent.putExtra("itemProfile", R.drawable.ic_bill)
+                        intent.putExtra("itemUserName", R.string.home_item4_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
+                        intent.putExtra("itemText", R.string.home_item4_text)
                         startActivity(intent)
                     }
 
                     item5 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("FromActivity", "News")
-                        intent.putExtra("url", "https://www.segye.com/newsView/20231219517979?OutUrl=naver")
-                        intent.putExtra("itemProfile", R.drawable.ic_world_news)
-                        intent.putExtra("itemUserName", R.string.news_item5_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_google_logo)
-                        intent.putExtra("itemText", R.string.news_item5_text)
+                        intent.putExtra("itemProfile", R.drawable.ic_bill)
+                        intent.putExtra("itemUserName", R.string.home_item4_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
+                        intent.putExtra("itemText", R.string.home_item4_text)
                         startActivity(intent)
                     }
                 }
@@ -151,25 +145,25 @@ class NewsActivity : AppCompatActivity() {
     }
 
     private fun drawNewsItems() {
-        item1Profile.setImageResource(R.drawable.ic_ai_news)
-        item1UserName.text = getString(R.string.news_item1_user_name)
-        item1Text.text = getString(R.string.news_item1_text)
+        item1Profile.setImageResource(R.drawable.ic_bill)
+        item1UserName.text = getString(R.string.home_item1_user_name)
+        item1Text.text = getString(R.string.home_item1_text)
 
-        item2Profile.setImageResource(R.drawable.ic_it_world)
-        item2UserName.text = getString(R.string.news_item2_user_name)
-        item2Text.text = getString(R.string.news_item2_text)
+        item2Profile.setImageResource(R.drawable.ic_musk)
+        item2UserName.text = getString(R.string.home_item2_user_name)
+        item2Text.text = getString(R.string.home_item2_text)
 
-        item3Profile.setImageResource(R.drawable.ic_yeonhap_news)
-        item3UserName.text = getString(R.string.news_item3_user_name)
-        item3Text.text = getString(R.string.news_item3_text)
+        item3Profile.setImageResource(R.drawable.ic_mark)
+        item3UserName.text = getString(R.string.home_item3_user_name)
+        item3Text.text = getString(R.string.home_item3_text)
 
-        item4Profile.setImageResource(R.drawable.ic_zdnet)
-        item4UserName.text = getString(R.string.news_item4_user_name)
-        item4Text.text = getString(R.string.news_item4_text)
+        item4Profile.setImageResource(R.drawable.ic_kimyounghan)
+        item4UserName.text = getString(R.string.home_item4_user_name)
+        item4Text.text = getString(R.string.home_item4_text)
 
-        item5Profile.setImageResource(R.drawable.ic_world_news)
-        item5UserName.text = getString(R.string.news_item5_user_name)
-        item5Text.text = getString(R.string.news_item5_text)
+        item5Profile.setImageResource(R.drawable.ic_kimbeomsu)
+        item5UserName.text = getString(R.string.home_item5_user_name)
+        item5Text.text = getString(R.string.home_item5_text)
     }
 
 }

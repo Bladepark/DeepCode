@@ -1,15 +1,14 @@
 package com.example.deepcode
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
 import com.example.deepcode.member.MemberInfo
+import androidx.appcompat.app.AppCompatActivity
+
 import com.example.deepcode.profile.ProfileActivity
 
 // 5조 파이팅!!
@@ -56,7 +55,6 @@ class HomeActivity : AppCompatActivity() {
     private val item5FollowBtn: Button by lazy { item5.findViewById(R.id.btn_item_follow) }
     private val item5Img: ImageView by lazy { item5.findViewById(R.id.iv_item_img) }
     private val item5Text: TextView by lazy { item5.findViewById(R.id.tv_item_text) }
-
 
     private val items
         get() = listOf(
@@ -118,7 +116,6 @@ class HomeActivity : AppCompatActivity() {
                 when (item) {
                     item1 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("FromActivity", "Home")
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item1_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_bill_img)
@@ -128,41 +125,37 @@ class HomeActivity : AppCompatActivity() {
 
                     item2 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("FromActivity", "Home")
-                        intent.putExtra("itemProfile", R.drawable.ic_bill)
+                        intent.putExtra("itemProfile", R.drawable.ic_musk)
                         intent.putExtra("itemUserName", R.string.home_item2_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
+                        intent.putExtra("itemImg", R.drawable.ic_musk_img)
                         intent.putExtra("itemText", R.string.home_item2_text)
                         startActivity(intent)
                     }
 
                     item3 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("FromActivity", "Home")
-                        intent.putExtra("itemProfile", R.drawable.ic_bill)
+                        intent.putExtra("itemProfile", R.drawable.ic_mark)
                         intent.putExtra("itemUserName", R.string.home_item3_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
+                        intent.putExtra("itemImg", R.drawable.ic_mark_img)
                         intent.putExtra("itemText", R.string.home_item3_text)
                         startActivity(intent)
                     }
 
                     item4 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("FromActivity", "Home")
-                        intent.putExtra("itemProfile", R.drawable.ic_bill)
+                        intent.putExtra("itemProfile", R.drawable.ic_kimyounghan)
                         intent.putExtra("itemUserName", R.string.home_item4_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
+                        intent.putExtra("itemImg", R.drawable.ic_kimyounghan_img)
                         intent.putExtra("itemText", R.string.home_item4_text)
                         startActivity(intent)
                     }
 
                     item5 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("FromActivity", "Home")
-                        intent.putExtra("itemProfile", R.drawable.ic_bill)
+                        intent.putExtra("itemProfile", R.drawable.ic_kimbeomsu)
                         intent.putExtra("itemUserName", R.string.home_item4_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
-                        intent.putExtra("itemText", R.string.home_item4_text)
+                        intent.putExtra("itemImg", R.drawable.ic_kimbeomsu_img)
+                        intent.putExtra("itemText", R.string.home_item5_text)
                         startActivity(intent)
                     }
                 }
@@ -178,22 +171,22 @@ class HomeActivity : AppCompatActivity() {
 
         item2Profile.setImageResource(R.drawable.ic_musk)
         item2UserName.text = getString(R.string.home_item2_user_name)
-        item2Img.setImageResource(R.drawable.ic_bill_img)
+        item2Img.setImageResource(R.drawable.ic_musk_img)
         item2Text.text = getString(R.string.home_item2_text)
 
         item3Profile.setImageResource(R.drawable.ic_mark)
         item3UserName.text = getString(R.string.home_item3_user_name)
-        item3Img.setImageResource(R.drawable.ic_bill_img)
+        item3Img.setImageResource(R.drawable.ic_mark_img)
         item3Text.text = getString(R.string.home_item3_text)
 
         item4Profile.setImageResource(R.drawable.ic_kimyounghan)
         item4UserName.text = getString(R.string.home_item4_user_name)
-        item4Img.setImageResource(R.drawable.ic_bill_img)
+        item4Img.setImageResource(R.drawable.ic_kimyounghan_img)
         item4Text.text = getString(R.string.home_item4_text)
 
         item5Profile.setImageResource(R.drawable.ic_kimbeomsu)
         item5UserName.text = getString(R.string.home_item5_user_name)
-        item5Img.setImageResource(R.drawable.ic_bill_img)
+        item5Img.setImageResource(R.drawable.ic_kimbeomsu_img)
         item5Text.text = getString(R.string.home_item5_text)
     }
 
@@ -217,5 +210,4 @@ class HomeActivity : AppCompatActivity() {
             }
         }
     }
-
 }
