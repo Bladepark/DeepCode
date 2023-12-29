@@ -11,6 +11,13 @@
     <string name="signIn_login">로그인</string>
     <string name="toast_msg_idpqErr">아이디/비밀번호를 확인해주세요</string>
     <string name="toast_login">로그인 성공</string>
+    <string name="toast_msg_signuperr">아이디/비밀번호가 일치하지 않습니다. 회원이 아니시라면 회원가입을 먼저 해주세요</string>
+    <string name="toast_msg_pwerr">비밀번호가 일치하지 않습니다</string>
+    <string name="toast_msg_spaceerr">아이디, 이름 또는 비밀번호에는 띄어쓰기를 사용할 수 없습니다</string>
+    <string name="toast_msg_signup">가입완료! 로그인 후 이용가능</string>
+    <string name="toast_msg_nameerr">이름은 영어 또는 한글로만 입력해주세요</string>
+    <string name="toast_msg_id2err">ID는 영어와 숫자로만 입력해주세요</string>
+    <string name="toast_msg_pw2err">비밀번호는 영어, 숫자, 특수문자를 포함하여 입력해주세요</string>
     <string name="recuit_item1_user_name">네이버 채용공고</string>
     <string name="recuit_item2_user_name">카카오 채용공고</string>
     <string name="recuit_item3_user_name">토스 채용공고</string>
@@ -21,6 +28,17 @@
     <string name="recuit_item3_text">[지원기간] \n2023.12.29~2024.01.05 \n[전형절차] \n 서류>온라인코딩테스트>1차면접>인턴십>2차면접</string>
     <string name="recuit_item4_text">[지원기간] \n2023.12.29~2024.01.05 \n[전형절차] \n 서류>온라인코딩테스트>1차면접>인턴십>2차면접</string>
     <string name="recuit_item5_text">[지원기간] \n2023.12.29~2024.01.05 \n[전형절차] \n 서류>온라인코딩테스트>1차면접>인턴십>2차면접</string>
+    <string name="recuit_item6_user_name">렛플 프로젝트</string>
+    <string name="recuit_item7_user_name">10대들의 커뮤니티 앱</string>
+    <string name="recuit_item8_user_name">중국 관광객 여행 보조 앱 </string>
+    <string name="recuit_item9_user_name">의류 020 플렛폼 </string>
+    <string name="recuit_item10_user_name">말타 프로젝트</string>
+    <string name="recuit_item6_text">ㄴ</string>
+    <string name="recuit_item7_text">ㄴ</string>
+    <string name="recuit_item8_text">ㄴ</string>
+    <string name="recuit_item9_text">ㄴ</string>
+    <string name="recuit_item10_text">ㄴ</string>
+    
 
 
 
