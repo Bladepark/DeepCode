@@ -163,6 +163,7 @@ class RecruitActivity : AppCompatActivity() {
 
                     item5 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "Recruit")
                         intent.putExtra("itemProfile", R.drawable.ic_threethree)
                         intent.putExtra("itemUserName", R.string.recuit_item5_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_threethree_img)

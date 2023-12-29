@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.deepcode.FollowInfo
@@ -19,6 +20,9 @@ class FollowingActivity : AppCompatActivity() {
         val density = resources.displayMetrics.density
         val marginDp = 32
         val marginPx = (marginDp * density).toInt()
+
+        // back 버튼 누르면 돌아가기
+        val btnBack = findViewById<ImageButton>(R.id.btn_back)
 
         // followingList가 비어있다면 예비 리스트 출력
         val followingList: MutableSet<String> = if (FollowInfo.followInfo.isNotEmpty()) {
@@ -52,6 +56,12 @@ class FollowingActivity : AppCompatActivity() {
             followerLayout.addView(unfollowButton)
 
             layout.addView(followerLayout)
+        }
+
+        // back 버튼 누르면 돌아가기
+        btnBack.setOnClickListener {
+            setResult(RESULT_OK, intent)
+            finish()
         }
     }
 }

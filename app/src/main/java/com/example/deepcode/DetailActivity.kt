@@ -9,6 +9,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.deepcode.member.MemberInfo
 
 class DetailActivity : AppCompatActivity() {
 
@@ -32,18 +33,25 @@ class DetailActivity : AppCompatActivity() {
 
     private fun setDetailView() {
         when (intent.getStringExtra("FromActivity")) {
+            "Home" -> {
+                itemUserName.text = getString(intent.getIntExtra("itemUserName", 0))
+            }
             "Recruit" -> {
+                itemUserName.text = getString(intent.getIntExtra("itemUserName", 0))
                 itemFollowBtn.visibility = View.GONE
             }
             "News" -> {
+                itemUserName.text = getString(intent.getIntExtra("itemUserName", 0))
                 itemFollowBtn.visibility = View.GONE
                 itemText.setOnClickListener {
                     setActionView(intent.getStringExtra("url")!!)
                 }
             }
+            "Profile" -> {
+                itemUserName.text = MemberInfo.memberInfo[0].name
+            }
         }
         itemProfile.setImageResource(intent.getIntExtra("itemProfile" ,0))
-        itemUserName.text = getString(intent.getIntExtra("itemUserName", 0))
         itemImg.setImageResource(intent.getIntExtra("itemImg" ,0))
         itemText.text = getString(intent.getIntExtra("itemText", 0))
         backBtn.setOnClickListener {
