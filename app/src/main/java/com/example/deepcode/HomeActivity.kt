@@ -167,7 +167,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun drawHomeItems() {
         item1Profile.setImageResource(R.drawable.ic_bill)
-        item1UserName.text = getString(R.string.home_item1_user_name)
+        item1UserName.text = MemberInfo.memberInfo[0].name            //getString(R.string.home_item1_user_name)
         item1Img.setImageResource(R.drawable.ic_bill_img)
         item1Text.text = getString(R.string.home_item1_text)
 

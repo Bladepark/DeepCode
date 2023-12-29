@@ -93,6 +93,7 @@ class NewsActivity : AppCompatActivity() {
                 when (item) {
                     item1 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "News")
                         intent.putExtra("itemProfile", R.drawable.ic_ai_news)
                         intent.putExtra("itemUserName", R.string.news_item1_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_macdonald)
@@ -102,6 +103,7 @@ class NewsActivity : AppCompatActivity() {
 
                     item2 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "News")
                         intent.putExtra("itemProfile", R.drawable.ic_it_world)
                         intent.putExtra("itemUserName", R.string.news_item2_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_happy_dev)
@@ -111,6 +113,7 @@ class NewsActivity : AppCompatActivity() {
 
                     item3 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "News")
                         intent.putExtra("itemProfile", R.drawable.ic_yeonhap_news)
                         intent.putExtra("itemUserName", R.string.news_item3_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_kakaomobile_news)
@@ -120,6 +123,7 @@ class NewsActivity : AppCompatActivity() {
 
                     item4 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "News")
                         intent.putExtra("itemProfile", R.drawable.ic_zdnet)
                         intent.putExtra("itemUserName", R.string.news_item4_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_hyosung_person)
@@ -129,6 +133,7 @@ class NewsActivity : AppCompatActivity() {
 
                     item5 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "News")
                         intent.putExtra("itemProfile", R.drawable.ic_world_news)
                         intent.putExtra("itemUserName", R.string.news_item5_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_google_logo)
