@@ -50,11 +50,11 @@ class SignUpActivity : AppCompatActivity() {
             val inputName = et_name.text.toString()
 
             if (inputpw != et_checkpw.text.toString()) {
-                Toast.makeText(this, "비밀번호가 일치하지 않습니다", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,getString(R.string.toast_msg_pwerr), Toast.LENGTH_SHORT).show()
             } else {
                 val containsSpaces = inputId.contains(" ") || inputpw.contains(" ") || inputName.contains(" ")
                 if (containsSpaces) {
-                    Toast.makeText(this, "아이디, 이름 또는 비밀번호에는 띄어쓰기를 사용할 수 없습니다", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,getString(R.string.toast_msg_spaceerr), Toast.LENGTH_SHORT).show()
                 } else {
                     val newMember = MemberData(
                         id = inputId,
@@ -62,7 +62,7 @@ class SignUpActivity : AppCompatActivity() {
                         name = inputName
                     )
                     MemberInfo.memberInfo.add(newMember)
-                    Toast.makeText(this, "가입완료! 로그인 후 이용가능", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.toast_msg_signup), Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, SignInActivity::class.java)
                     intent.putExtra("id", inputId)
                     intent.putExtra("password", inputpw)
@@ -87,21 +87,21 @@ class SignUpActivity : AppCompatActivity() {
     private fun checkValidName(editText: EditText) {
         val namePattern = "^[a-zA-Z가-힣]*$".toRegex()
         if (!namePattern.matches(editText.text.toString())) {
-            editText.error = "이름은 영어 또는 한글로만 입력해주세요"
+            editText.error = getString(R.string.toast_msg_nameerr)
         }
     }
 
     private fun checkValidId(editText: EditText) {
         val idPattern = "^[a-zA-Z0-9]*$".toRegex()
         if (!idPattern.matches(editText.text.toString())) {
-            editText.error = "ID는 영어와 숫자로만 입력해주세요"
+            editText.error = getString(R.string.toast_msg_id2err)
         }
     }
 
     private fun checkValidPw(editText: EditText) {
         val passwordPattern = "^[a-zA-Z0-9!@#\$%^&*()-_+=?/]*$".toRegex()
         if (!passwordPattern.matches(editText.text.toString())) {
-            editText.error = "비밀번호는 영어, 숫자, 특수문자를 포함하여 입력해주세요"
+            editText.error = getString(R.string.toast_msg_pw2err)
         }
     }
 }
