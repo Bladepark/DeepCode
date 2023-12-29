@@ -123,46 +123,86 @@ class RecruitActivity : AppCompatActivity() {
                 when (item) {
                     item1 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("itemProfile", R.drawable.ic_bill)
-                        intent.putExtra("itemUserName", R.string.home_item1_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
-                        intent.putExtra("itemText", R.string.home_item1_text)
+                        intent.putExtra("itemProfile", R.drawable.ic_naver)
+                        intent.putExtra("itemUserName", R.string.recuit_item1_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_naver_img)
+                        intent.putExtra("itemText", R.string.recuit_item1_text)
                         startActivity(intent)
                     }
 
                     item2 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("itemProfile", R.drawable.ic_bill)
-                        intent.putExtra("itemUserName", R.string.home_item2_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
-                        intent.putExtra("itemText", R.string.home_item2_text)
+                        intent.putExtra("itemProfile", R.drawable.ic_kakao)
+                        intent.putExtra("itemUserName", R.string.recuit_item2_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_kakao_img)
+                        intent.putExtra("itemText", R.string.recuit_item2_text)
                         startActivity(intent)
                     }
 
                     item3 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("itemProfile", R.drawable.ic_bill)
-                        intent.putExtra("itemUserName", R.string.home_item3_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
-                        intent.putExtra("itemText", R.string.home_item3_text)
+                        intent.putExtra("itemProfile", R.drawable.ic_toss)
+                        intent.putExtra("itemUserName", R.string.recuit_item3_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_toss_img)
+                        intent.putExtra("itemText", R.string.recuit_item3_text)
                         startActivity(intent)
                     }
 
                     item4 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("itemProfile", R.drawable.ic_bill)
-                        intent.putExtra("itemUserName", R.string.home_item4_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
-                        intent.putExtra("itemText", R.string.home_item4_text)
+                        intent.putExtra("itemProfile", R.drawable.ic_brother)
+                        intent.putExtra("itemUserName", R.string.recuit_item4_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_brother_img)
+                        intent.putExtra("itemText", R.string.recuit_item4_text)
                         startActivity(intent)
                     }
 
                     item5 -> {
                         val intent = Intent(this, DetailActivity::class.java)
-                        intent.putExtra("itemProfile", R.drawable.ic_bill)
-                        intent.putExtra("itemUserName", R.string.home_item4_user_name)
-                        intent.putExtra("itemImg", R.drawable.ic_bill_img)
-                        intent.putExtra("itemText", R.string.home_item4_text)
+                        intent.putExtra("itemProfile", R.drawable.ic_threethree)
+                        intent.putExtra("itemUserName", R.string.recuit_item5_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_threethree_img)
+                        intent.putExtra("itemText", R.string.recuit_item5_text)
+                        startActivity(intent)
+                    }
+                    item6 -> {
+                        val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("itemProfile", R.drawable.ic_retple)
+                        intent.putExtra("itemUserName", R.string.recuit_item6_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_peole)
+                        intent.putExtra("itemText", R.string.recuit_item6_text)
+                        startActivity(intent)
+                    }
+                    item7 -> {
+                        val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("itemProfile", R.drawable.ic_10comu)
+                        intent.putExtra("itemUserName", R.string.recuit_item7_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_10comuple)
+                        intent.putExtra("itemText", R.string.recuit_item7_text)
+                        startActivity(intent)
+                    }
+                    item8 -> {
+                        val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("itemProfile", R.drawable.ic_china)
+                        intent.putExtra("itemUserName", R.string.recuit_item8_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_people2)
+                        intent.putExtra("itemText", R.string.recuit_item8_text)
+                        startActivity(intent)
+                    }
+                    item9 -> {
+                        val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("itemProfile", R.drawable.ic_cloth)
+                        intent.putExtra("itemUserName", R.string.recuit_item9_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_people3)
+                        intent.putExtra("itemText", R.string.recuit_item9_text)
+                        startActivity(intent)
+                    }
+                    item10 -> {
+                        val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("itemProfile", R.drawable.ic_horse)
+                        intent.putExtra("itemUserName", R.string.recuit_item10_user_name)
+                        intent.putExtra("itemImg", R.drawable.ic_people4)
+                        intent.putExtra("itemText", R.string.recuit_item10_text)
                         startActivity(intent)
                     }
                 }
@@ -171,45 +211,45 @@ class RecruitActivity : AppCompatActivity() {
     }
 
     private fun drawRecruitItems() {
-        item1Profile.setImageResource(R.drawable.ic_bill)
-        item1UserName.text = getString(R.string.home_item1_user_name)
-        item1Text.text = getString(R.string.home_item1_text)
+        item1Profile.setImageResource(R.drawable.ic_naver)
+        item1UserName.text = getString(R.string.recuit_item1_user_name)
+        item1Text.text = getString(R.string.recuit_item1_text)
 
-        item2Profile.setImageResource(R.drawable.ic_musk)
-        item2UserName.text = getString(R.string.home_item2_user_name)
-        item2Text.text = getString(R.string.home_item2_text)
+        item2Profile.setImageResource(R.drawable.ic_kakao)
+        item2UserName.text = getString(R.string.recuit_item2_user_name)
+        item2Text.text = getString(R.string.recuit_item2_text)
 
-        item3Profile.setImageResource(R.drawable.ic_mark)
-        item3UserName.text = getString(R.string.home_item3_user_name)
-        item3Text.text = getString(R.string.home_item3_text)
+        item3Profile.setImageResource(R.drawable.ic_toss)
+        item3UserName.text = getString(R.string.recuit_item3_user_name)
+        item3Text.text = getString(R.string.recuit_item3_text)
 
-        item4Profile.setImageResource(R.drawable.ic_kimyounghan)
-        item4UserName.text = getString(R.string.home_item4_user_name)
-        item4Text.text = getString(R.string.home_item4_text)
+        item4Profile.setImageResource(R.drawable.ic_brother)
+        item4UserName.text = getString(R.string.recuit_item4_user_name)
+        item4Text.text = getString(R.string.recuit_item4_text)
 
-        item5Profile.setImageResource(R.drawable.ic_kimbeomsu)
-        item5UserName.text = getString(R.string.home_item5_user_name)
-        item5Text.text = getString(R.string.home_item5_text)
+        item5Profile.setImageResource(R.drawable.ic_threethree)
+        item5UserName.text = getString(R.string.recuit_item5_user_name)
+        item5Text.text = getString(R.string.recuit_item5_text)
 
-        item6Profile.setImageResource(R.drawable.ic_kimbeomsu)
-        item6UserName.text = getString(R.string.home_item5_user_name)
-        item6Text.text = getString(R.string.home_item5_text)
+        item6Profile.setImageResource(R.drawable.ic_retple)
+        item6UserName.text = getString(R.string.recuit_item6_user_name)
+        item6Text.text = getString(R.string.recuit_item6_text)
 
-        item7Profile.setImageResource(R.drawable.ic_kimbeomsu)
-        item7UserName.text = getString(R.string.home_item5_user_name)
-        item7Text.text = getString(R.string.home_item5_text)
+        item7Profile.setImageResource(R.drawable.ic_10comu)
+        item7UserName.text = getString(R.string.recuit_item7_user_name)
+        item7Text.text = getString(R.string.recuit_item7_text)
 
-        item8Profile.setImageResource(R.drawable.ic_kimbeomsu)
-        item8UserName.text = getString(R.string.home_item5_user_name)
-        item8Text.text = getString(R.string.home_item5_text)
+        item8Profile.setImageResource(R.drawable.ic_china)
+        item8UserName.text = getString(R.string.recuit_item8_user_name)
+        item8Text.text = getString(R.string.recuit_item8_text)
 
-        item9Profile.setImageResource(R.drawable.ic_kimbeomsu)
-        item9UserName.text = getString(R.string.home_item5_user_name)
-        item9Text.text = getString(R.string.home_item5_text)
+        item9Profile.setImageResource(R.drawable.ic_cloth)
+        item9UserName.text = getString(R.string.recuit_item9_user_name)
+        item9Text.text = getString(R.string.recuit_item9_text)
 
-        item10Profile.setImageResource(R.drawable.ic_kimbeomsu)
-        item10UserName.text = getString(R.string.home_item5_user_name)
-        item10Text.text = getString(R.string.home_item5_text)
+        item10Profile.setImageResource(R.drawable.ic_horse)
+        item10UserName.text = getString(R.string.recuit_item10_user_name)
+        item10Text.text = getString(R.string.recuit_item10_text)
     }
 }
 
