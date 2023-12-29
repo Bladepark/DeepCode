@@ -31,10 +31,10 @@
         android:layout_width="77dp"
         android:layout_height="88dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/round_background"
         android:clipToOutline="true"
-        android:src="@drawable/profile1"
+        android:src="@drawable/ic_profile1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_profile" />
 
@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="이름"
+        android:text="@string/profile_user_name"
         app:layout_constraintStart_toEndOf="@+id/iv_profile"
         app:layout_constraintTop_toTopOf="@+id/iv_profile" />
 
@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="아이디"
+        android:text="@string/profile_user_id"
         app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
         app:layout_constraintStart_toEndOf="@+id/iv_profile" />
 
@@ -61,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:text="박민영"
+        android:text="@string/profile_myPark_text"
         app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="@+id/textView4" />
@@ -71,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:text="myPark"
+        android:text="@string/profile_myPark_id"
         app:layout_constraintBottom_toBottomOf="@+id/textView5"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="@+id/textView5" />
@@ -81,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
-        android:text="프로필 수정"
+        android:text="@string/profile_update_profile"
         app:layout_constraintBottom_toBottomOf="@+id/tv_profile_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_profile_name" />
@@ -90,7 +90,7 @@
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="32dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -104,7 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="팔로잉"
+        android:text="@string/profile_following"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -116,7 +116,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="팔로워"
+        android:text="@string/profile_follower"
         android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/tv_following"
         app:layout_constraintHorizontal_bias="0.5"
@@ -129,10 +129,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
-        android:text="로그아웃"
+        android:text="@string/profile_sign_out"
         app:layout_constraintBottom_toBottomOf="@+id/tv_profile_id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_profile_id" />
+
+    <LinearLayout
+        android:id="@+id/profile_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_linear_layout"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_my_post_list"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+        <include
+            android:id="@+id/itemPost"
+            layout="@layout/feed_item_layout" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bottom_linear_layout"
@@ -173,7 +196,5 @@
             android:layout_weight="0.25"
             android:src="@drawable/ic_profile" />
     </LinearLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

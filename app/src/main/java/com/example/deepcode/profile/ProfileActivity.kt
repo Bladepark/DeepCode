@@ -2,10 +2,12 @@ package com.example.deepcode.profile
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.deepcode.DetailActivity
 import com.example.deepcode.HomeActivity
 import com.example.deepcode.NewsActivity
 import com.example.deepcode.R
@@ -13,7 +15,6 @@ import com.example.deepcode.RecruitActivity
 import com.example.deepcode.follow.FollowerActivity
 import com.example.deepcode.follow.FollowingActivity
 import com.example.deepcode.member.MemberInfo
-import com.example.deepcode.member.MemberInfo.memberInfo
 import com.example.deepcode.sign.SignInActivity
 
 class ProfileActivity : AppCompatActivity() {
@@ -22,6 +23,14 @@ class ProfileActivity : AppCompatActivity() {
     private val navRecruitBtn: ImageView by lazy { findViewById(R.id.btn_recruit) }
     private val navNewsBtn: ImageView by lazy { findViewById(R.id.btn_news) }
     private val navProfileBtn: ImageView by lazy { findViewById(R.id.btn_profile) }
+
+    private val itemPost: View by lazy { findViewById(R.id.itemPost) }
+
+    private val itemProfile: ImageView by lazy { itemPost.findViewById(R.id.iv_item_profile) }
+    private val itemUserName: TextView by lazy { itemPost.findViewById(R.id.tv_item_user_name) }
+    private val itemFollowBtn: Button by lazy { itemPost.findViewById(R.id.btn_item_follow) }
+    private val itemImg: ImageView by lazy { itemPost.findViewById(R.id.iv_item_img) }
+    private val itemText: TextView by lazy { itemPost.findViewById(R.id.tv_item_text) }
 
     private val navBtns
         get() = listOf(
@@ -50,13 +59,33 @@ class ProfileActivity : AppCompatActivity() {
 
         // ivProfile 5장중 하나 랜덤
         val profileList = listOf(
-            R.drawable.profile1,
-            R.drawable.profile2,
-            R.drawable.profile3,
-            R.drawable.profile4,
-            R.drawable.profile5
+            R.drawable.ic_profile1,
+            R.drawable.ic_profile2,
+            R.drawable.ic_profile3,
+            R.drawable.ic_profile4,
+            R.drawable.ic_profile5
         )
         ivProfile.setImageResource(profileList.random())
+
+        itemProfile.setImageResource(R.drawable.ic_profile1)
+        itemUserName.text = member.name
+        itemImg.setImageResource(R.drawable.ic_profile1_img)
+        itemText.text = getString(R.string.home_item1_text)
+
+
+        itemPost.setOnClickListener {
+            when (itemPost) {
+                itemPost -> {
+                    val intent = Intent(this, DetailActivity::class.java)
+                    intent.putExtra("itemProfile", R.drawable.ic_profile1)
+                    intent.putExtra("itemUserName", MemberInfo.memberInfo[0].name)
+                    intent.putExtra("itemImg", R.drawable.ic_profile1_img)
+                    intent.putExtra("itemText", R.string.home_item1_text)
+                    startActivity(intent)
+                }
+            }
+        }
+
 
 
         navBtns.forEach { navBtn ->
