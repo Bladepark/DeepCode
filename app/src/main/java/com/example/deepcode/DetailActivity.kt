@@ -33,8 +33,6 @@ class DetailActivity : AppCompatActivity() {
         itemImg.setImageResource(intent.getIntExtra("itemImg" ,0))
         itemText.text = getString(intent.getIntExtra("itemText", 0))
         backBtn.setOnClickListener {
-
-
             setResult(RESULT_OK, intent)
             finish()
         }
