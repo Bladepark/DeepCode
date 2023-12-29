@@ -118,6 +118,7 @@ class HomeActivity : AppCompatActivity() {
                 when (item) {
                     item1 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "Home")
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item1_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_bill_img)
@@ -127,6 +128,7 @@ class HomeActivity : AppCompatActivity() {
 
                     item2 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "Home")
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item2_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_bill_img)
@@ -136,6 +138,7 @@ class HomeActivity : AppCompatActivity() {
 
                     item3 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "Home")
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item3_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_bill_img)
@@ -145,6 +148,7 @@ class HomeActivity : AppCompatActivity() {
 
                     item4 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "Home")
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item4_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_bill_img)
@@ -154,6 +158,7 @@ class HomeActivity : AppCompatActivity() {
 
                     item5 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "Home")
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item4_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_bill_img)
@@ -167,7 +172,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun drawHomeItems() {
         item1Profile.setImageResource(R.drawable.ic_bill)
-        item1UserName.text = MemberInfo.memberInfo[0].name            //getString(R.string.home_item1_user_name)
+        item1UserName.text = MemberInfo.memberInfo[0].name
         item1Img.setImageResource(R.drawable.ic_bill_img)
         item1Text.text = getString(R.string.home_item1_text)
 
