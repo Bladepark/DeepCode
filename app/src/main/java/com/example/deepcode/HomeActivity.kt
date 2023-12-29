@@ -1,15 +1,12 @@
 package com.example.deepcode
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
-import com.example.deepcode.member.MemberInfo
+import androidx.appcompat.app.AppCompatActivity
 import com.example.deepcode.profile.ProfileActivity
 
 // 5조 파이팅!!
@@ -172,7 +169,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun drawHomeItems() {
         item1Profile.setImageResource(R.drawable.ic_bill)
-        item1UserName.text = MemberInfo.memberInfo[0].name
+        item1UserName.text = getString(R.string.home_item1_user_name)
         item1Img.setImageResource(R.drawable.ic_bill_img)
         item1Text.text = getString(R.string.home_item1_text)
 
