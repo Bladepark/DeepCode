@@ -77,7 +77,7 @@ class RecruitActivity : AppCompatActivity() {
             item7,
             item8,
             item9,
-            item10,
+            item10
         )
 
     private val navBtns
@@ -251,7 +251,6 @@ class RecruitActivity : AppCompatActivity() {
         item10UserName.text = getString(R.string.recuit_item10_user_name)
         item10Text.text = getString(R.string.recuit_item10_text)
     }
-
 }
 
 

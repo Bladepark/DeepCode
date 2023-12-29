@@ -1,11 +1,11 @@
 package com.example.deepcode
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class DetailActivity : AppCompatActivity() {
 
@@ -33,8 +33,6 @@ class DetailActivity : AppCompatActivity() {
         itemImg.setImageResource(intent.getIntExtra("itemImg" ,0))
         itemText.text = getString(intent.getIntExtra("itemText", 0))
         backBtn.setOnClickListener {
-
-
             setResult(RESULT_OK, intent)
             finish()
         }
