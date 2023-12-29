@@ -1,5 +1,107 @@
 <resources>
     <string name="app_name">DeepCode</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_id">아이디를 입력해주세요</string>
+    <string name="sign_pw">비밀번호를 입력해주세요</string>
+    <string name="sign_up_name">이름를 입력해주세요</string>
+    <string name="sign_up_pwch">위와 같은 비밀번호를 입력해주세요</string>
+    <string name="sign_up_pwerr">비밀번호가 일치하지 않습니다</string>
+    <string name="pwname">비밀번호</string>
+    <string name="signupname">회원가입</string>
+    <string name="pwchName">비밀번호 확인</string>
+    <string name="signIn_login">로그인</string>
+    <string name="toast_msg_idpqErr">아이디/비밀번호를 확인해주세요</string>
+    <string name="toast_login">로그인 성공</string>
+    <string name="toast_msg_signuperr">아이디/비밀번호가 일치하지 않습니다. 회원이 아니시라면 회원가입을 먼저 해주세요</string>
+    <string name="toast_msg_pwerr">비밀번호가 일치하지 않습니다</string>
+    <string name="toast_msg_spaceerr">아이디, 이름 또는 비밀번호에는 띄어쓰기를 사용할 수 없습니다</string>
+    <string name="toast_msg_signup">가입완료! 로그인 후 이용가능</string>
+    <string name="toast_msg_nameerr">이름은 영어 또는 한글로만 입력해주세요</string>
+    <string name="toast_msg_id2err">ID는 영어와 숫자로만 입력해주세요</string>
+    <string name="toast_msg_pw2err">비밀번호는 영어, 숫자, 특수문자를 포함하여 입력해주세요</string>
+    <string name="recuit_item1_user_name">네이버 채용공고</string>
+    <string name="recuit_item2_user_name">카카오 채용공고</string>
+    <string name="recuit_item3_user_name">토스 채용공고</string>
+    <string name="recuit_item4_user_name">우아한형제들 채용공고</string>
+    <string name="recuit_item5_user_name">삼쩜삼 채용공고</string>
+    <string name="recuit_item1_text">[지원기간] \n2023.12.29~2024.01.05 \n[전형절차] \n 서류>온라인코딩테스트>1차면접>인턴십>2차면접</string>
+    <string name="recuit_item2_text">[지원기간] \n2023.12.29~2024.01.05 \n[전형절차] \n 서류>온라인코딩테스트>1차면접>인턴십>2차면접</string>
+    <string name="recuit_item3_text">[지원기간] \n2023.12.29~2024.01.05 \n[전형절차] \n 서류>온라인코딩테스트>1차면접>인턴십>2차면접</string>
+    <string name="recuit_item4_text">[지원기간] \n2023.12.29~2024.01.05 \n[전형절차] \n 서류>온라인코딩테스트>1차면접>인턴십>2차면접</string>
+    <string name="recuit_item5_text">[지원기간] \n2023.12.29~2024.01.05 \n[전형절차] \n 서류>온라인코딩테스트>1차면접>인턴십>2차면접</string>
+    <string name="recuit_item6_user_name">렛플 프로젝트</string>
+    <string name="recuit_item7_user_name">10대들의 커뮤니티 앱</string>
+    <string name="recuit_item8_user_name">중국 관광객 여행 보조 앱 </string>
+    <string name="recuit_item9_user_name">의류 020 플렛폼 </string>
+    <string name="recuit_item10_user_name">말타 프로젝트</string>
+    <string name="recuit_item6_text">프로젝트 시작하게된 계기\n 이앱은 몇년간 사이드 프로젝트를 했던 저희팀의 경험으로 만든 서비스입니다.\n 많은 사이드프로젝트가 같이 할사람을 구하고 있지만, 그방법은 조금 수작업에 가까웠습니다.</string>
+    <string name="recuit_item7_text">프로젝트 시작하게된 계기\n 이앱은 몇년간 사이드 프로젝트를 했던 저희팀의 경험으로 만든 서비스입니다.\n 많은 사이드프로젝트가 같이 할사람을 구하고 있지만, 그방법은 조금 수작업에 가까웠습니다.</string>
+    <string name="recuit_item8_text">프로젝트 시작하게된 계기\n 이앱은 몇년간 사이드 프로젝트를 했던 저희팀의 경험으로 만든 서비스입니다.\n 많은 사이드프로젝트가 같이 할사람을 구하고 있지만, 그방법은 조금 수작업에 가까웠습니다.</string>
+    <string name="recuit_item9_text">프로젝트 시작하게된 계기\n 이앱은 몇년간 사이드 프로젝트를 했던 저희팀의 경험으로 만든 서비스입니다.\n 많은 사이드프로젝트가 같이 할사람을 구하고 있지만, 그방법은 조금 수작업에 가까웠습니다.</string>
+    <string name="recuit_item10_text">프로젝트 시작하게된 계기\n 이앱은 몇년간 사이드 프로젝트를 했던 저희팀의 경험으로 만든 서비스입니다.\n 많은 사이드프로젝트가 같이 할사람을 구하고 있지만, 그방법은 조금 수작업에 가까웠습니다.</string>
+
+
+    <string name="home_item1_user_name">빌 게이츠</string>
+    <string name="home_item2_user_name">일론 머스크</string>
+    <string name="home_item3_user_name">마크 저커버그</string>
+    <string name="home_item4_user_name">김영한</string>
+    <string name="home_item5_user_name">김범수</string>
+    <string name="home_item1_text">올해는 새로운 시대의 시작을 알리는 해\n내년이 더 나은 세상을 위한 다음 장을 만들어갈 기회라고 믿는 이유가 바로 여기에 있다</string>
+    <string name="home_item2_text">사람들은 목표가 무엇이고 그 이유를 알 때 더 잘 일합니다\n사람들이 아침에 출근하고 즐겁게 일하기를 고대하는 것이 중요합니다</string>
+    <string name="home_item3_text">옳다고 믿으면 끝까지 밀고 나가라\n작은 일도 시작해야 위대한 일도 생긴다\n결국에 신념을 가진 자가 승리한다</string>
+    <string name="home_item4_text">발로 뛰고 가슴으로 고민하고 몸으로 실천하는 가운데 마침내는 원하는 것을 성취해 낸다\n나무는 큰 나무 아래서 자랄 수 없지만, 사람은 큰 사람 밑에서 그 보다 더 큰 사람으로 자랄 수 있다</string>
+    <string name="home_item5_text">’라이트 타임, 라이트 액션(Right Time, Right Action)’이 중요합니다\n적절한 시기에 적절한 행동을 할 때 사업의 성패가 갈립니다\n타이밍을 놓치면 의미가 없어집니다 </string>
+    <string name="home_myPark_text">박민영</string>
+    <string name="profile_my_post_list">나의 게시물 목록</string>
+    <string name="updateProfile_id">아이디</string>
+    <string name="updateProfile_name">이름</string>
+    <string name="updateProfile_update_confirm">수정완료</string>
+    <string name="profile_user_name">이름</string>
+    <string name="profile_user_id">아이디</string>
+    <string name="profile_myPark_text">박민영</string>
+    <string name="profile_myPark_id">myPark</string>
+    <string name="profile_update_profile">프로필 수정</string>
+    <string name="profile_following">팔로잉</string>
+    <string name="profile_follower">팔로워</string>
+    <string name="profile_sign_out">로그아웃</string>
+
+    <string name="btn_follow_text">팔로우</string>
+    <string name="btn_unfollow_text">언팔로우</string>
+    <string name="detail_item1_text">우리는 지금 전환의 시작점에 있다. 아직  AI를 활용하는 방법을 찾지 못했다면, 당신은 혼자가 아니다.
+        인터넷 시작 당시에는 사용하는 사람이 많지 않았으나, 시간이 지나면서 일반화되고 어느 날 대부분이 이메일을 하고  온라인으로 물건을 구입하고 검색 엔진을 사용한다는 사실을 깨닫게 됐다.
+        즉 자연스럽게 누구나 AI를 사용할 날이 찾아올 것이다.내가 가장 좋아하는 혁신 이야기는 2000년 이후 전 세계에서 5세 이전에 사망하는 어린이의 수가 절반으로 줄었다는 것이다.
+        AI 도구는 약물 개발의 속도를 더욱 빠르게 만들 수 있다.여전히 격차가 있지만, 다른 기술 혁신에서 볼 수 있는 격차보다 훨씬 짧다.
+        우리가 현명한 투자를 한다면 AI는 세상을 더 공평한 곳으로 만들 수 있다.내가 젊었을 때는 휴가나 주말을 따지지 않았으나, 아버지가 된 이후부터 삶에는 일보다 더 중요한 것이 있다는 것을 깨달았다.
+        여러분도 2024년이 시작되기 전 연휴 기간에 사랑하는 사람들과 함께하길 기원한다.</string>
+
+    <string name="news_item1_user_name">AI 뉴스</string>
+    <string name="news_item2_user_name">IT World 뉴스</string>
+    <string name="news_item3_user_name">연합 뉴스</string>
+    <string name="news_item4_user_name">ZDNET Korea</string>
+    <string name="news_item5_user_name">세계 일보</string>
+
+    <string name="news_item1_text">맥도날드 \"전 세계 매장에 구글 생성 AI 도입\"\n 맥도날드가 전 세계 매장에 구글의 생성 인공지능(AI) 기술을
+        도입한다고 밝혔다. 구체적인 내용은 소개하지 않았으나, 키오스크나 전용 모바일 앱에 AI 챗봇을 탑재하고 매장 내 카메라에도 AI 기술을 적용할
+        것으로 보인다.이에 따르면 맥도날드는 "구글의 하드웨어, 데이터, AI 기술을 활용해 고객과 직원을 위한 더 나은 경험을 제공할 것"이라고 밝혔다.
+        또 파트너십의 일환으로 맥도날드는 1억5000만명이 사용 중인 모바일 앱부터 수천대의 셀프서비스 키오스크에 이르기까지 중요한 발전을 선보일 예정이라고 전했다.
+        더 많은 내용이 궁금하시다면 클릭해주세요.
+    </string>
+    <string name="news_item2_text">개발팀의 행복을 유지하는 9가지 전략\n소프트웨어 개발자 수요가 늘고 있다는 것은 더는 비밀이 아니다. 불확실한 경제 상황에도
+        기업은 코딩할 줄 아는 사람을 찾고 유지하려고 전력을 다하고 있다. 이럴 때 개발팀 책임자에게 있어 중요한 질문은 개발자가 직업에 만족하게 하는 요소가 무엇이냐는 것이다.
+        문제점이 무엇인지도 알아야 한다. 갈 곳이 많은 상황에서 개발자가 기대를 충족하지 않는 직장에 남을 동인은 크지 않기 때문이다. 개발자의 직업적 만족도는
+        품질 높은 소프트웨어를 만들고 싶어하는 모든 기업에 있어 최우선 순위다. 여러 개발자와 IT 전문가를 대상으로 직장에서 개발자를 행복하게 하는 요소를 물어보았다.
+        이들의 답변은 다음과 같다. 더 많은 내용이 궁금하시다면 클릭해주세요.
+    </string>
+    <string name="news_item3_text">"카카오T 해외 호출 서비스 작년 대비 7배로 성장"\n 카카오모빌리티의 택시 플랫폼 카카오T 애플리케이션(앱)으로 해외에서 차량을 호출할 수
+        있는 서비스의 올해 1∼3분기 이용량이 작년 같은 기간 대비 7배 넘게 급성장한 것으로 나타났다. 카카오모빌리티는 올해 카카오T의 다양한 해외 이동 서비스 데이터를 담은 연말 결산
+        보고서를 통해 29일 이같이 밝혔다. 더 많은 내용이 궁금하시다면 클릭해주세요.
+    </string>
+    <string name="news_item4_text">IT 인프라 현대화를 위한 최선의 선택 ‘STaaS’\nIT 인프라는 기업이 새로운 기회를 포착하고 끊임없이 변화하는 고객 요구에 대응하도록 지원한다. 클라우드 컴퓨팅 시대가
+        도래하면서 기업들은 상시 가동 기능, 무제한 온디맨드 용량, 가동 중단 및 장애에 대비한 유연한 IT인프라를 제공해야 한다는 압박을 받고 있다. 더 많은 내용이 궁금하시다면 클릭해주세요.
+    </string>
+    <string name="news_item5_text">‘반독점 피소’ 구글, 9100억원에 합의… 안드로이드폰 결제 시스템 달라진다\n구글이 자사 결제 시스템(인앱결제)을 강제한 행위에 대해 미국 30여개 주가 제기한 반독점 소송을
+        해결하고자 합의금 7억달러(약 9100억원)를 지불하기로 했다고 18일(현지시간) 발표했다. 더 많은 내용이 궁금하시다면 클릭해주세요.
+    </string>
+
+
+
 </resources>
