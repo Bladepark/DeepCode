@@ -26,9 +26,8 @@ class SignInActivity : AppCompatActivity() {
         val et_id = findViewById<EditText>(R.id.etSignUpId)
         val et_pw = findViewById<EditText>(R.id.etSignUpPw)
 
-        val intent = Intent(this, HomeActivity::class.java)
-        intent.putExtra("name", "value")
-        intent.putExtra("id", "value")
+
+
 
         btn_login.isEnabled =false
         et_id.doAfterTextChanged {

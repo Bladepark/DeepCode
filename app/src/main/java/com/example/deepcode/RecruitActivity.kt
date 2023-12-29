@@ -123,6 +123,7 @@ class RecruitActivity : AppCompatActivity() {
                 when (item) {
                     item1 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "Recruit")
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item1_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_bill_img)
@@ -132,6 +133,7 @@ class RecruitActivity : AppCompatActivity() {
 
                     item2 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "Recruit")
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item2_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_bill_img)
@@ -141,6 +143,7 @@ class RecruitActivity : AppCompatActivity() {
 
                     item3 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "Recruit")
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item3_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_bill_img)
@@ -150,6 +153,7 @@ class RecruitActivity : AppCompatActivity() {
 
                     item4 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "Recruit")
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item4_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_bill_img)
@@ -159,6 +163,7 @@ class RecruitActivity : AppCompatActivity() {
 
                     item5 -> {
                         val intent = Intent(this, DetailActivity::class.java)
+                        intent.putExtra("FromActivity", "Recruit")
                         intent.putExtra("itemProfile", R.drawable.ic_bill)
                         intent.putExtra("itemUserName", R.string.home_item4_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_bill_img)
