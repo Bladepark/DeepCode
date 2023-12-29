@@ -2,7 +2,8 @@
     <string name="app_name">DeepCode</string>
     <string name="sign_id">아이디를 입력해주세요</string>
     <string name="sign_pw">비밀번호를 입력해주세요</string>
-    <string name="sign_up_name">이름를 입력해주세요</string>
+    <string name="sign_up_nameerr">이름를 입력해주세요</string>
+    <string name="sign_up_name">이름</string>
     <string name="sign_up_pwch">위와 같은 비밀번호를 입력해주세요</string>
     <string name="sign_up_pwerr">비밀번호가 일치하지 않습니다</string>
     <string name="signupidname">아이디</string>
