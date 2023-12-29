@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecruitActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_constraint_layout"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="@string/app_name"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <HorizontalScrollView
+        android:id="@+id/company_recruit_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@id/project_recruit_scroll_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_constraint_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/item1"
+                layout="@layout/recruit_item_layout"
+                android:layout_width="200dp"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/item2"
+                layout="@layout/recruit_item_layout"
+                android:layout_width="200dp"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/item3"
+                layout="@layout/recruit_item_layout"
+                android:layout_width="200dp"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/item4"
+                layout="@layout/recruit_item_layout"
+                android:layout_width="200dp"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/item5"
+                layout="@layout/recruit_item_layout"
+                android:layout_width="200dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/project_recruit_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_linear_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/company_recruit_scroll_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/item6"
+                layout="@layout/recruit_item_layout"
+                android:layout_width="200dp"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/item7"
+                layout="@layout/recruit_item_layout"
+                android:layout_width="200dp"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/item8"
+                layout="@layout/recruit_item_layout"
+                android:layout_width="200dp"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/item9"
+                layout="@layout/recruit_item_layout"
+                android:layout_width="200dp"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/item10"
+                layout="@layout/recruit_item_layout"
+                android:layout_width="200dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_recruit_add_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_person"
+        app:layout_constraintBottom_toBottomOf="@id/fab_recruit_add"
+        app:layout_constraintEnd_toEndOf="@id/fab_recruit_add"
+        app:layout_constraintStart_toStartOf="@id/fab_recruit_add"
+        app:layout_constraintTop_toTopOf="@id/fab_recruit_add" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_recruit_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="90dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/bottom_linear_layout"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_home"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.25"
+            android:src="@drawable/ic_home" />
+
+        <ImageView
+            android:id="@+id/btn_recruit"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.25"
+            android:src="@drawable/ic_recruit" />
+
+        <ImageView
+            android:id="@+id/btn_news"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.25"
+            android:src="@drawable/ic_news" />
+
+        <ImageView
+            android:id="@+id/btn_profile"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.25"
+            android:src="@drawable/ic_profile" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
