@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.deepcode.AnimationActivity
 import com.example.deepcode.DetailActivity
 import com.example.deepcode.HomeActivity
 import com.example.deepcode.NewsActivity
@@ -17,7 +18,7 @@ import com.example.deepcode.follow.FollowingActivity
 import com.example.deepcode.member.MemberInfo
 import com.example.deepcode.sign.SignInActivity
 
-class ProfileActivity : AppCompatActivity() {
+class ProfileActivity : AnimationActivity(TransitionMode.LEFTTORIGHT) {
 
     private val navHomeBtn: ImageView by lazy { findViewById(R.id.btn_home) }
     private val navRecruitBtn: ImageView by lazy { findViewById(R.id.btn_recruit) }
@@ -84,10 +85,25 @@ class ProfileActivity : AppCompatActivity() {
         navBtns.forEach { navBtn ->
             navBtn.setOnClickListener {
                 when (navBtn) {
-                    navHomeBtn -> startActivity(Intent(this, HomeActivity::class.java))
-                    navRecruitBtn -> startActivity(Intent(this, RecruitActivity::class.java))
-                    navNewsBtn -> startActivity(Intent(this, NewsActivity::class.java))
-                    navProfileBtn -> startActivity(Intent(this, ProfileActivity::class.java))
+                    navHomeBtn -> {
+                        startActivity(Intent(this, HomeActivity::class.java))
+                        finish()
+                    }
+
+                    navRecruitBtn -> {
+                        startActivity(Intent(this, RecruitActivity::class.java))
+                        finish()
+                    }
+
+                    navNewsBtn -> {
+                        startActivity(Intent(this, NewsActivity::class.java))
+                        finish()
+                    }
+
+                    navProfileBtn -> {
+                        startActivity(Intent(this, ProfileActivity::class.java))
+                        finish()
+                    }
                 }
             }
         }

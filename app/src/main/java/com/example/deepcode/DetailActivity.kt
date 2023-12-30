@@ -11,7 +11,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.deepcode.member.MemberInfo
 
-class DetailActivity : AppCompatActivity() {
+class DetailActivity : AnimationActivity(TransitionMode.DOWNTOUP) {
 
     private val itemProfile: ImageView by lazy { findViewById(R.id.iv_detail_profile) }
     private val itemUserName: TextView by lazy { findViewById(R.id.tv_detail_user_name) }
@@ -70,11 +70,11 @@ class DetailActivity : AppCompatActivity() {
     private fun setFollowBtnStatus() {
         itemFollowBtn.setOnClickListener {
             when (itemFollowBtn.text.toString()) {
-                "follow" -> {
+                "Follow" -> {
                     itemFollowBtn.text = getString(R.string.btn_unfollow_text)
                 }
 
-                "unfollow" -> {
+                "Unfollow" -> {
                     itemFollowBtn.text = getString(R.string.btn_follow_text)
                 }
 

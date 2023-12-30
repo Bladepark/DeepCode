@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.deepcode.profile.ProfileActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class RecruitActivity : AppCompatActivity() {
+class RecruitActivity : AnimationActivity(TransitionMode.LEFTTORIGHT) {
 
     private val item1: View by lazy { findViewById(R.id.item1) }
     private val item2: View by lazy { findViewById(R.id.item2) }
@@ -117,10 +117,25 @@ class RecruitActivity : AppCompatActivity() {
         navBtns.forEach { navBtn ->
             navBtn.setOnClickListener {
                 when (navBtn) {
-                    navHomeBtn -> startActivity(Intent(this, HomeActivity::class.java))
-                    navRecruitBtn -> startActivity(Intent(this, RecruitActivity::class.java))
-                    navNewsBtn -> startActivity(Intent(this, NewsActivity::class.java))
-                    navProfileBtn -> startActivity(Intent(this, ProfileActivity::class.java))
+                    navHomeBtn -> {
+                        startActivity(Intent(this, HomeActivity::class.java))
+                        finish()
+                    }
+
+                    navRecruitBtn -> {
+                        startActivity(Intent(this, RecruitActivity::class.java))
+                        finish()
+                    }
+
+                    navNewsBtn -> {
+                        startActivity(Intent(this, NewsActivity::class.java))
+                        finish()
+                    }
+
+                    navProfileBtn -> {
+                        startActivity(Intent(this, ProfileActivity::class.java))
+                        finish()
+                    }
                 }
             }
         }

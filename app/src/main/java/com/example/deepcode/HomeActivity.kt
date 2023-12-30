@@ -17,7 +17,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 // 5조 파이팅!!
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AnimationActivity(TransitionMode.LEFTTORIGHT) {
 
     private val item1: View by lazy { findViewById(R.id.item1) }
     private val item2: View by lazy { findViewById(R.id.item2) }
@@ -60,7 +60,7 @@ class HomeActivity : AppCompatActivity() {
     private val item5Img: ImageView by lazy { item5.findViewById(R.id.iv_item_img) }
     private val item5Text: TextView by lazy { item5.findViewById(R.id.tv_item_text) }
 
-    lateinit var resultLauncher: ActivityResultLauncher<Intent>
+    private lateinit var resultLauncher: ActivityResultLauncher<Intent>
 
     private val fabHomeAdd: FloatingActionButton by lazy { findViewById(R.id.fab_home_add) }
     private val fabHomeAddFeed: FloatingActionButton by lazy { findViewById(R.id.fab_home_add_feed) }
@@ -114,10 +114,25 @@ class HomeActivity : AppCompatActivity() {
         navBtns.forEach { navBtn ->
             navBtn.setOnClickListener {
                 when (navBtn) {
-                    navHomeBtn -> startActivity(Intent(this, HomeActivity::class.java))
-                    navRecruitBtn -> startActivity(Intent(this, RecruitActivity::class.java))
-                    navNewsBtn -> startActivity(Intent(this, NewsActivity::class.java))
-                    navProfileBtn -> startActivity(Intent(this, ProfileActivity::class.java))
+                    navHomeBtn -> {
+                        startActivity(Intent(this, HomeActivity::class.java))
+                        finish()
+                    }
+
+                    navRecruitBtn -> {
+                        startActivity(Intent(this, RecruitActivity::class.java))
+                        finish()
+                    }
+
+                    navNewsBtn -> {
+                        startActivity(Intent(this, NewsActivity::class.java))
+                        finish()
+                    }
+
+                    navProfileBtn -> {
+                        startActivity(Intent(this, ProfileActivity::class.java))
+                        finish()
+                    }
                 }
             }
         }
@@ -231,32 +246,33 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setResultLauncher() {
-        resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            if (result.resultCode == RESULT_OK) {
-                val data: Intent? = result.data
-                val followBtnStatus = data?.getStringExtra("followBtnStatus")
+        resultLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+                if (result.resultCode == RESULT_OK) {
+                    val data: Intent? = result.data
+                    val followBtnStatus = data?.getStringExtra("followBtnStatus")
 
-                when (data?.getIntExtra("selectedItem", 0)) {
-                    1 -> item1FollowBtn.text = followBtnStatus
-                    2 -> item2FollowBtn.text = followBtnStatus
-                    3 -> item3FollowBtn.text = followBtnStatus
-                    4 -> item4FollowBtn.text = followBtnStatus
-                    5 -> item5FollowBtn.text = followBtnStatus
-                    else -> ""
+                    when (data?.getIntExtra("selectedItem", 0)) {
+                        1 -> item1FollowBtn.text = followBtnStatus
+                        2 -> item2FollowBtn.text = followBtnStatus
+                        3 -> item3FollowBtn.text = followBtnStatus
+                        4 -> item4FollowBtn.text = followBtnStatus
+                        5 -> item5FollowBtn.text = followBtnStatus
+                        else -> ""
+                    }
                 }
             }
-        }
     }
 
     private fun setFollowBtnStatus() {
         followBtns.forEach { followBtn ->
             followBtn.setOnClickListener {
                 when (followBtn.text.toString()) {
-                    "follow" -> {
+                    "Follow" -> {
                         followBtn.text = getString(R.string.btn_unfollow_text)
                     }
 
-                    "unfollow" -> {
+                    "Unfollow" -> {
                         followBtn.text = getString(R.string.btn_follow_text)
                     }
 
