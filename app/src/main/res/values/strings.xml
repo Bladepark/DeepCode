@@ -96,4 +96,6 @@
     <string name="news_item5_text">‘반독점 피소’ 구글, 9100억원에 합의… 안드로이드폰 결제 시스템 달라진다\n구글이 자사 결제 시스템(인앱결제)을 강제한 행위에 대해 미국 30여개 주가 제기한 반독점 소송을
         해결하고자 합의금 7억달러(약 9100억원)를 지불하기로 했다고 18일(현지시간) 발표했다. 더 많은 내용이 궁금하시다면 클릭해주세요.
     </string>
+    <string name="follower_delete">삭제</string>
+    <string name="following_unfollow">언팔로우</string>
 </resources>
