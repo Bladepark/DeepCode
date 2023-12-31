@@ -10,7 +10,7 @@
         android:id="@+id/top_constraint_layout"
         android:layout_width="0dp"
         android:layout_height="70dp"
-        android:background="@color/gray"
+        android:background="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -152,7 +152,7 @@
         android:id="@+id/bottom_linear_layout"
         android:layout_width="0dp"
         android:layout_height="70dp"
-        android:background="@color/gray"
+        android:background="@color/blue"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
