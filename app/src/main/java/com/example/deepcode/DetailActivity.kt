@@ -52,9 +52,9 @@ class DetailActivity : AnimationActivity(TransitionMode.DOWNTOUP) {
                     setActionView(intent.getStringExtra("url")!!)
                 }
             }
-
             "Profile" -> {
                 itemUserName.text = MemberInfo.memberInfo[0].name
+                itemFollowBtn.visibility = View.GONE
             }
         }
         itemProfile.setImageResource(intent.getIntExtra("itemProfile", 0))

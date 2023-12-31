@@ -15,6 +15,7 @@ abstract class AnimationActivity(private val transitionMode: TransitionMode = Tr
         super.onCreate(savedInstanceState)
 
         when(transitionMode) {
+            // TransitionMode.LEFTTORIGHT -> overrideActivityTransition()
             TransitionMode.LEFTTORIGHT -> overridePendingTransition(R.anim.left_to_right_enter, R.anim.none)
             TransitionMode.DOWNTOUP -> overridePendingTransition(R.anim.down_to_up, R.anim.none)
             else -> Unit
