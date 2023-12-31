@@ -44,7 +44,7 @@ class FollowingActivity : AppCompatActivity() {
             val unfollowButtonParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
             unfollowButtonParams.setMargins(marginPx, marginPx, marginPx, marginPx)
             unfollowButton.layoutParams = unfollowButtonParams
-            unfollowButton.text = "unfollow"
+            unfollowButton.text = getString(R.string.following_unfollow)
             unfollowButton.setOnClickListener {
                 layout.removeView(it.parent as View)
             }
