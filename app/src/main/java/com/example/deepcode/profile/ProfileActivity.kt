@@ -71,7 +71,7 @@ class ProfileActivity : AppCompatActivity() {
 
         itemPost.setOnClickListener {
             val intent = Intent(this, DetailActivity::class.java)
-            intent.putExtra("FromActivity", "profile")
+            intent.putExtra("FromActivity", "Profile")
             intent.putExtra("itemProfile", R.drawable.ic_sparta_character)
             intent.putExtra("itemUserName", 0)
             intent.putExtra("itemImg", R.drawable.ic_musk)
