@@ -38,8 +38,6 @@
     <string name="recuit_item8_text">프로젝트 시작하게된 계기\n 이앱은 몇년간 사이드 프로젝트를 했던 저희팀의 경험으로 만든 서비스입니다.\n 많은 사이드프로젝트가 같이 할사람을 구하고 있지만, 그방법은 조금 수작업에 가까웠습니다.</string>
     <string name="recuit_item9_text">프로젝트 시작하게된 계기\n 이앱은 몇년간 사이드 프로젝트를 했던 저희팀의 경험으로 만든 서비스입니다.\n 많은 사이드프로젝트가 같이 할사람을 구하고 있지만, 그방법은 조금 수작업에 가까웠습니다.</string>
     <string name="recuit_item10_text">프로젝트 시작하게된 계기\n 이앱은 몇년간 사이드 프로젝트를 했던 저희팀의 경험으로 만든 서비스입니다.\n 많은 사이드프로젝트가 같이 할사람을 구하고 있지만, 그방법은 조금 수작업에 가까웠습니다.</string>
-
-
     <string name="home_item1_user_name">빌 게이츠</string>
     <string name="home_item2_user_name">일론 머스크</string>
     <string name="home_item3_user_name">마크 저커버그</string>
@@ -63,7 +61,6 @@
     <string name="profile_following">팔로잉</string>
     <string name="profile_follower">팔로워</string>
     <string name="profile_sign_out">로그아웃</string>
-
     <string name="btn_follow_text">팔로우</string>
     <string name="btn_unfollow_text">언팔로우</string>
     <string name="detail_item1_text">우리는 지금 전환의 시작점에 있다. 아직  AI를 활용하는 방법을 찾지 못했다면, 당신은 혼자가 아니다.
@@ -72,13 +69,11 @@
         AI 도구는 약물 개발의 속도를 더욱 빠르게 만들 수 있다.여전히 격차가 있지만, 다른 기술 혁신에서 볼 수 있는 격차보다 훨씬 짧다.
         우리가 현명한 투자를 한다면 AI는 세상을 더 공평한 곳으로 만들 수 있다.내가 젊었을 때는 휴가나 주말을 따지지 않았으나, 아버지가 된 이후부터 삶에는 일보다 더 중요한 것이 있다는 것을 깨달았다.
         여러분도 2024년이 시작되기 전 연휴 기간에 사랑하는 사람들과 함께하길 기원한다.</string>
-
     <string name="news_item1_user_name">AI 뉴스</string>
     <string name="news_item2_user_name">IT World 뉴스</string>
     <string name="news_item3_user_name">연합 뉴스</string>
     <string name="news_item4_user_name">ZDNET Korea</string>
     <string name="news_item5_user_name">세계 일보</string>
-
     <string name="news_item1_text">맥도날드 \"전 세계 매장에 구글 생성 AI 도입\"\n 맥도날드가 전 세계 매장에 구글의 생성 인공지능(AI) 기술을
         도입한다고 밝혔다. 구체적인 내용은 소개하지 않았으나, 키오스크나 전용 모바일 앱에 AI 챗봇을 탑재하고 매장 내 카메라에도 AI 기술을 적용할
         것으로 보인다.이에 따르면 맥도날드는 "구글의 하드웨어, 데이터, AI 기술을 활용해 고객과 직원을 위한 더 나은 경험을 제공할 것"이라고 밝혔다.
@@ -101,7 +96,4 @@
     <string name="news_item5_text">‘반독점 피소’ 구글, 9100억원에 합의… 안드로이드폰 결제 시스템 달라진다\n구글이 자사 결제 시스템(인앱결제)을 강제한 행위에 대해 미국 30여개 주가 제기한 반독점 소송을
         해결하고자 합의금 7억달러(약 9100억원)를 지불하기로 했다고 18일(현지시간) 발표했다. 더 많은 내용이 궁금하시다면 클릭해주세요.
     </string>
-
-
-
 </resources>

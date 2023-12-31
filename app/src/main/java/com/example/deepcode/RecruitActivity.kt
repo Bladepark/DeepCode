@@ -1,14 +1,17 @@
 package com.example.deepcode
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.deepcode.profile.ProfileActivity
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class RecruitActivity : AppCompatActivity() {
+class RecruitActivity : AnimationActivity(TransitionMode.LEFTTORIGHT) {
 
     private val item1: View by lazy { findViewById(R.id.item1) }
     private val item2: View by lazy { findViewById(R.id.item2) }
@@ -66,6 +69,11 @@ class RecruitActivity : AppCompatActivity() {
     private val item10UserName: TextView by lazy { item10.findViewById(R.id.tv_item_user_name) }
     private val item10Text: TextView by lazy { item10.findViewById(R.id.tv_item_text) }
 
+    private val fabRecruitAdd: FloatingActionButton by lazy { findViewById(R.id.fab_recruit_add) }
+    private val fabRecruitAddItem: FloatingActionButton by lazy { findViewById(R.id.fab_recruit_add_person) }
+
+    private var isFabOpen = false
+
     private val items
         get() = listOf(
             item1,
@@ -102,16 +110,32 @@ class RecruitActivity : AppCompatActivity() {
         setNavBtnClickListener()
         setRecruitItemsEvent()
         drawRecruitItems()
+        setFABEvent()
     }
 
     private fun setNavBtnClickListener() {
         navBtns.forEach { navBtn ->
             navBtn.setOnClickListener {
                 when (navBtn) {
-                    navHomeBtn -> startActivity(Intent(this, HomeActivity::class.java))
-                    navRecruitBtn -> startActivity(Intent(this, RecruitActivity::class.java))
-                    navNewsBtn -> startActivity(Intent(this, NewsActivity::class.java))
-                    navProfileBtn -> startActivity(Intent(this, ProfileActivity::class.java))
+                    navHomeBtn -> {
+                        startActivity(Intent(this, HomeActivity::class.java))
+                        finish()
+                    }
+
+                    navRecruitBtn -> {
+                        startActivity(Intent(this, RecruitActivity::class.java))
+                        finish()
+                    }
+
+                    navNewsBtn -> {
+                        startActivity(Intent(this, NewsActivity::class.java))
+                        finish()
+                    }
+
+                    navProfileBtn -> {
+                        startActivity(Intent(this, ProfileActivity::class.java))
+                        finish()
+                    }
                 }
             }
         }
@@ -170,6 +194,7 @@ class RecruitActivity : AppCompatActivity() {
                         intent.putExtra("itemText", R.string.recuit_item5_text)
                         startActivity(intent)
                     }
+
                     item6 -> {
                         val intent = Intent(this, DetailActivity::class.java)
                         intent.putExtra("FromActivity", "Recruit")
@@ -179,6 +204,7 @@ class RecruitActivity : AppCompatActivity() {
                         intent.putExtra("itemText", R.string.recuit_item6_text)
                         startActivity(intent)
                     }
+
                     item7 -> {
                         val intent = Intent(this, DetailActivity::class.java)
                         intent.putExtra("FromActivity", "Recruit")
@@ -188,6 +214,7 @@ class RecruitActivity : AppCompatActivity() {
                         intent.putExtra("itemText", R.string.recuit_item7_text)
                         startActivity(intent)
                     }
+
                     item8 -> {
                         val intent = Intent(this, DetailActivity::class.java)
                         intent.putExtra("FromActivity", "Recruit")
@@ -197,6 +224,7 @@ class RecruitActivity : AppCompatActivity() {
                         intent.putExtra("itemText", R.string.recuit_item8_text)
                         startActivity(intent)
                     }
+
                     item9 -> {
                         val intent = Intent(this, DetailActivity::class.java)
                         intent.putExtra("FromActivity", "Recruit")
@@ -206,6 +234,7 @@ class RecruitActivity : AppCompatActivity() {
                         intent.putExtra("itemText", R.string.recuit_item9_text)
                         startActivity(intent)
                     }
+
                     item10 -> {
                         val intent = Intent(this, DetailActivity::class.java)
                         intent.putExtra("FromActivity", "Recruit")
@@ -261,6 +290,24 @@ class RecruitActivity : AppCompatActivity() {
         item10UserName.text = getString(R.string.recuit_item10_user_name)
         item10Text.text = getString(R.string.recuit_item10_text)
     }
+
+    private fun setFABEvent() {
+        fabRecruitAdd.setOnClickListener {
+            if (isFabOpen) {
+                ObjectAnimator.ofFloat(fabRecruitAddItem, "translationY", 0f).apply { start() }
+                ObjectAnimator.ofFloat(fabRecruitAdd, View.ROTATION, 45f, 0f).apply { start() }
+            } else {
+                ObjectAnimator.ofFloat(fabRecruitAddItem, "translationY", -180f).apply { start() }
+                ObjectAnimator.ofFloat(fabRecruitAdd, View.ROTATION, 0f, 45f).apply { start() }
+            }
+            isFabOpen = isFabOpen.not()
+        }
+
+        fabRecruitAddItem.setOnClickListener {
+            Toast.makeText(this, "현재 게시물을 작성하실 수 없습니다.", Toast.LENGTH_SHORT).show()
+        }
+    }
+
 }
 
 

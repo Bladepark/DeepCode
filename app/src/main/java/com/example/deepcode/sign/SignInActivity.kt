@@ -51,8 +51,6 @@ class SignInActivity : AppCompatActivity() {
                 if(memberExist) {
                     Toast.makeText(this, getString(R.string.toast_login), Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, HomeActivity::class.java)
-                    intent.putExtra("memberId", inputId)
-                    intent.putExtra("memberPw", inputPw)
                     startActivity(intent)
                 } else {
                     Toast.makeText(this,getString(R.string.toast_msg_signuperr),Toast.LENGTH_SHORT).show()

@@ -1,5 +1,6 @@
 package com.example.deepcode
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,14 +8,16 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.deepcode.member.MemberInfo
 import com.example.deepcode.profile.ProfileActivity
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 // 5조 파이팅!!
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AnimationActivity(TransitionMode.LEFTTORIGHT) {
 
     private val item1: View by lazy { findViewById(R.id.item1) }
     private val item2: View by lazy { findViewById(R.id.item2) }
@@ -57,6 +60,12 @@ class HomeActivity : AppCompatActivity() {
     private val item5Img: ImageView by lazy { item5.findViewById(R.id.iv_item_img) }
     private val item5Text: TextView by lazy { item5.findViewById(R.id.tv_item_text) }
 
+    private lateinit var resultLauncher: ActivityResultLauncher<Intent>
+
+    private val fabHomeAdd: FloatingActionButton by lazy { findViewById(R.id.fab_home_add) }
+    private val fabHomeAddFeed: FloatingActionButton by lazy { findViewById(R.id.fab_home_add_feed) }
+
+    private var isFabOpen = false
 
     private val items
         get() = listOf(
@@ -96,6 +105,8 @@ class HomeActivity : AppCompatActivity() {
         setHomeItemsEvent()
         drawHomeItems()
         setFollowBtnStatus()
+        setFABEvent()
+        setResultLauncher()
     }
 
 
@@ -103,10 +114,25 @@ class HomeActivity : AppCompatActivity() {
         navBtns.forEach { navBtn ->
             navBtn.setOnClickListener {
                 when (navBtn) {
-                    navHomeBtn -> startActivity(Intent(this, HomeActivity::class.java))
-                    navRecruitBtn -> startActivity(Intent(this, RecruitActivity::class.java))
-                    navNewsBtn -> startActivity(Intent(this, NewsActivity::class.java))
-                    navProfileBtn -> startActivity(Intent(this, ProfileActivity::class.java))
+                    navHomeBtn -> {
+                        startActivity(Intent(this, HomeActivity::class.java))
+                        finish()
+                    }
+
+                    navRecruitBtn -> {
+                        startActivity(Intent(this, RecruitActivity::class.java))
+                        finish()
+                    }
+
+                    navNewsBtn -> {
+                        startActivity(Intent(this, NewsActivity::class.java))
+                        finish()
+                    }
+
+                    navProfileBtn -> {
+                        startActivity(Intent(this, ProfileActivity::class.java))
+                        finish()
+                    }
                 }
             }
         }
@@ -123,7 +149,8 @@ class HomeActivity : AppCompatActivity() {
                         intent.putExtra("itemUserName", R.string.home_item1_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_bill_img)
                         intent.putExtra("itemText", R.string.home_item1_text)
-                        startActivity(intent)
+                        intent.putExtra("followBtnStatus", item1FollowBtn.text.toString())
+                        resultLauncher.launch(intent)
                     }
 
                     item2 -> {
@@ -133,7 +160,8 @@ class HomeActivity : AppCompatActivity() {
                         intent.putExtra("itemUserName", R.string.home_item2_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_musk_img)
                         intent.putExtra("itemText", R.string.home_item2_text)
-                        startActivity(intent)
+                        intent.putExtra("followBtnStatus", item2FollowBtn.text.toString())
+                        resultLauncher.launch(intent)
                     }
 
                     item3 -> {
@@ -143,7 +171,8 @@ class HomeActivity : AppCompatActivity() {
                         intent.putExtra("itemUserName", R.string.home_item3_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_mark_img)
                         intent.putExtra("itemText", R.string.home_item3_text)
-                        startActivity(intent)
+                        intent.putExtra("followBtnStatus", item3FollowBtn.text.toString())
+                        resultLauncher.launch(intent)
                     }
 
                     item4 -> {
@@ -153,7 +182,8 @@ class HomeActivity : AppCompatActivity() {
                         intent.putExtra("itemUserName", R.string.home_item4_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_kimyounghan_img)
                         intent.putExtra("itemText", R.string.home_item4_text)
-                        startActivity(intent)
+                        intent.putExtra("followBtnStatus", item4FollowBtn.text.toString())
+                        resultLauncher.launch(intent)
                     }
 
                     item5 -> {
@@ -163,7 +193,8 @@ class HomeActivity : AppCompatActivity() {
                         intent.putExtra("itemUserName", R.string.home_item5_user_name)
                         intent.putExtra("itemImg", R.drawable.ic_kimbeomsu_img)
                         intent.putExtra("itemText", R.string.home_item5_text)
-                        startActivity(intent)
+                        intent.putExtra("followBtnStatus", item5FollowBtn.text.toString())
+                        resultLauncher.launch(intent)
                     }
                 }
             }
@@ -197,19 +228,58 @@ class HomeActivity : AppCompatActivity() {
         item5Text.text = getString(R.string.home_item5_text)
     }
 
+    private fun setFABEvent() {
+        fabHomeAdd.setOnClickListener {
+            if (isFabOpen) {
+                ObjectAnimator.ofFloat(fabHomeAddFeed, "translationY", 0f).apply { start() }
+                ObjectAnimator.ofFloat(fabHomeAdd, View.ROTATION, 45f, 0f).apply { start() }
+            } else {
+                ObjectAnimator.ofFloat(fabHomeAddFeed, "translationY", -180f).apply { start() }
+                ObjectAnimator.ofFloat(fabHomeAdd, View.ROTATION, 0f, 45f).apply { start() }
+            }
+            isFabOpen = isFabOpen.not()
+        }
+
+        fabHomeAddFeed.setOnClickListener {
+            Toast.makeText(this, "현재 게시물을 작성하실 수 없습니다.", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun setResultLauncher() {
+        resultLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+                if (result.resultCode == RESULT_OK) {
+                    val data: Intent? = result.data
+                    val followBtnStatus = data?.getStringExtra("followBtnStatus")
+
+                    when (data?.getIntExtra("selectedItem", 0)) {
+                        1 -> item1FollowBtn.text = followBtnStatus
+                        2 -> item2FollowBtn.text = followBtnStatus
+                        3 -> item3FollowBtn.text = followBtnStatus
+                        4 -> item4FollowBtn.text = followBtnStatus
+                        5 -> item5FollowBtn.text = followBtnStatus
+                        else -> ""
+                    }
+                }
+            }
+    }
+
     private fun setFollowBtnStatus() {
         followBtns.forEach { followBtn ->
             followBtn.setOnClickListener {
-                when(followBtn.text.toString()) {
-                    "follow" -> {
+                when (followBtn.text.toString()) {
+                    "Follow" -> {
                         followBtn.text = getString(R.string.btn_unfollow_text)
                     }
-                    "unfollow" -> {
+
+                    "Unfollow" -> {
                         followBtn.text = getString(R.string.btn_follow_text)
                     }
+
                     "팔로우" -> {
                         followBtn.text = getString(R.string.btn_unfollow_text)
                     }
+
                     "언팔로우" -> {
                         followBtn.text = getString(R.string.btn_follow_text)
                     }
