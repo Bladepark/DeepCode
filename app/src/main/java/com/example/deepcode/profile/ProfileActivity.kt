@@ -6,7 +6,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import com.example.deepcode.AnimationActivity
 import com.example.deepcode.DetailActivity
 import com.example.deepcode.HomeActivity
@@ -68,6 +67,7 @@ class ProfileActivity : AnimationActivity(TransitionMode.LEFTTORIGHT) {
         itemUserName.text = member.name
         itemImg.setImageResource(R.drawable.ic_musk)
         itemText.text = getString(R.string.home_item1_text)
+        itemFollowBtn.visibility = View.GONE
 
 
         itemPost.setOnClickListener {

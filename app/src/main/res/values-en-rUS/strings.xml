@@ -75,4 +75,6 @@
     <string name="news_item3_user_name">Yonhap News</string>
     <string name="news_item4_user_name">ZDNET Korea</string>
     <string name="news_item5_user_name">World Daily News</string>
+    <string name="follower_delete">delete</string>
+    <string name="following_unfollow">unfollow</string>
 </resources>

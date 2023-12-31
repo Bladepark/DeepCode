@@ -44,7 +44,7 @@ class FollowerActivity : AppCompatActivity() {
             val unfollowButtonParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
             unfollowButtonParams.setMargins(marginPx, marginPx, marginPx, marginPx)
             deleteButton.layoutParams = unfollowButtonParams
-            deleteButton.text = "delete"
+            deleteButton.text = getString(R.string.follower_delete)
             deleteButton.setOnClickListener {
                 layout.removeView(it.parent as View)
             }
